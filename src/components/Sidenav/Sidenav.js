@@ -1,7 +1,6 @@
+import { Box, Flex, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { Flex, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-
-import Content from "./components/Content";
+import Content from "./Content";
 
 export default function Sidenav(props) {
   const { routes } = props;
