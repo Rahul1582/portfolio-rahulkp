@@ -2,61 +2,51 @@ import React from "react";
 
 import { Icon } from "@chakra-ui/react";
 import {
+  MdDashboard,
   MdBarChart,
   MdPerson,
   MdHome,
-  MdOutlineShoppingCart
+  MdPersonPin,
+  MdCode,
+  MdContacts
 } from "react-icons/md";
 
 const routes = [
   {
     name: "Dashboard",
-    layout: "/admin",
-    path: "/default",
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />
+    path: "/home",
+    icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />
     // component: MainDashboard
   },
   {
     name: "About",
-    layout: "/admin",
-    path: "/nft-marketplace",
-    icon: (
-      <Icon
-        as={MdOutlineShoppingCart}
-        width="20px"
-        height="20px"
-        color="inherit"
-      />
-    ),
+    path: "/about",
+    icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />,
     // component: NFTMarketplace,
     secondary: true
   },
   {
     name: "Resume",
-    layout: "/admin",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: "/data-tables"
+    path: "/resume"
     // component: DataTables
   },
   {
     name: "Projects And Blogs",
-    layout: "/admin",
-    path: "/profile3",
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
+    path: "/projects",
+    icon: <Icon as={MdCode} width="20px" height="20px" color="inherit" />
     // component: Profile
   },
   {
     name: "Hobbies",
-    layout: "/admin",
-    path: "/profile1",
+    path: "/hobbies",
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
     // component: Profile
   },
   {
     name: "Contact Me",
-    layout: "/admin",
-    path: "/profile2",
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
+    path: "/contact",
+    icon: <Icon as={MdContacts} width="20px" height="20px" color="inherit" />
     // component: Profile
   }
 ];

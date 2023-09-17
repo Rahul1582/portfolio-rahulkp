@@ -17,7 +17,7 @@ export default function Content(props) {
 
   return routes.map((route, index) => {
     return (
-      <NavLink key={index} to={route.layout + route.path}>
+      <NavLink key={index} to={route.path}>
         <Box>
           <HStack
             spacing={activeRoute(route.path.toLowerCase()) ? "22px" : "26px"}
