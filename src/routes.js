@@ -11,19 +11,20 @@ import {
   MdContacts
 } from "react-icons/md";
 
+import Dashboard from "./views/dashboard/dashboard";
+
 const routes = [
   {
     name: "Dashboard",
-    path: "/home",
-    icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />
-    // component: MainDashboard
+    path: "/dashboard",
+    icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />,
+    component: Dashboard
   },
   {
     name: "About",
     path: "/about",
-    icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />
     // component: NFTMarketplace,
-    secondary: true
   },
   {
     name: "Resume",
