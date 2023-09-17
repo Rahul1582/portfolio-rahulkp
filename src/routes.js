@@ -12,6 +12,7 @@ import {
 } from "react-icons/md";
 
 import Dashboard from "./views/dashboard/dashboard";
+import About from "./views/about/about";
 
 const routes = [
   {
@@ -21,10 +22,10 @@ const routes = [
     component: Dashboard
   },
   {
-    name: "About",
+    name: "About Me",
     path: "/about",
-    icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />
-    // component: NFTMarketplace,
+    icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />,
+    component: About
   },
   {
     name: "Resume",

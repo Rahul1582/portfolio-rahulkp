@@ -1,18 +1,19 @@
 import React from "react";
 import { Box, useStyleConfig, Flex, Image } from "@chakra-ui/react";
 
-export default function DashboardCard(props) {
+export default function TechStackCard(props) {
   const { imagepath } = { ...props };
   const styles = useStyleConfig("Card");
 
   return (
     <Box
       __css={styles}
+      s
       transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
       _hover={{
-        transform: "scale(1.08)", // Scale up on hover
-        boxShadow: "lg", // Add a box shadow on hover
-        cursor: "pointer" // Change cursor to pointer on hover
+        transform: "scale(1.08)", 
+        boxShadow: "lg", 
+        cursor: "pointer"
       }}
     >
       <Flex
