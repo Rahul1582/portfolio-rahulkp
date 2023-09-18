@@ -13,6 +13,7 @@ import {
 
 import Dashboard from "./views/dashboard/dashboard";
 import About from "./views/about/about";
+import Resume from "./views/resume/resume";
 
 const routes = [
   {
@@ -29,9 +30,9 @@ const routes = [
   },
   {
     name: "Resume",
+    path: "/resume",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: "/resume"
-    // component: DataTables
+    component: Resume
   },
   {
     name: "Projects And Blogs",
