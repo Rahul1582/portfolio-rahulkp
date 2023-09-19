@@ -26,7 +26,7 @@ export default function About() {
       >
         <TypeAnimation
           sequence={["ABOUT ME", 500, "ABOUT", 500, "ABOUT ME", 500]}
-          style={{ fontSize: "4em" }}
+          style={{ fontSize: "3em" }}
           cursor={false}
         />
       </Flex>
@@ -48,7 +48,7 @@ export default function About() {
             "MY SKILLSET",
             500
           ]}
-          style={{ fontSize: "4em" }}
+          style={{ fontSize: "3em" }}
           cursor={false}
         />
       </Flex>

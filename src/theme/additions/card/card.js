@@ -10,12 +10,12 @@ const Card = {
     minWidth: "0px",
     wordWrap: "break-word",
     bg: mode("#ffffff", "navy.800")(props),
-    backgroundClip: "border-box",
-  }),
+    backgroundClip: "border-box"
+  })
 };
 
 export const CardComponent = {
   components: {
-    Card,
-  },
+    Card
+  }
 };

@@ -6,6 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme/theme";
 import { ThemeEditorProvider } from "@hypertheme-editor/chakra-ui";
+import { pdfjs } from "react-pdf";
+
+// Configure pdfjs worker path
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -14,6 +14,7 @@ import {
 import Dashboard from "./views/dashboard/dashboard";
 import About from "./views/about/about";
 import Resume from "./views/resume/resume";
+import Projects from "./views/projects/projects";
 
 const routes = [
   {
@@ -37,8 +38,8 @@ const routes = [
   {
     name: "Projects And Blogs",
     path: "/projects",
-    icon: <Icon as={MdCode} width="20px" height="20px" color="inherit" />
-    // component: Profile
+    icon: <Icon as={MdCode} width="20px" height="20px" color="inherit" />,
+    component: Projects
   },
   {
     name: "Hobbies",
