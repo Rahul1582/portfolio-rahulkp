@@ -11,7 +11,14 @@ import {
 } from "@chakra-ui/react";
 
 export default function ProjectCard(props) {
-  const { projectImage, techStack, projectName, projectLiveLink, projectLink } = props;
+  const {
+    projectImage,
+    aboutProject,
+    techStack,
+    projectName,
+    projectLiveLink,
+    projectLink
+  } = props;
   const textColor = useColorModeValue("navy.700", "white");
   const styles = useStyleConfig("Card");
   return (
@@ -23,13 +30,14 @@ export default function ProjectCard(props) {
         boxShadow: "md",
         cursor: "pointer"
       }}
+      h="500px"
     >
       <Flex direction={{ base: "column" }} justify="center">
-        <Box mb={{ base: "20px", "2xl": "20px" }} position="relative">
+        <Box mb={{ base: "10px", "2xl": "10px" }} position="relative">
           <Image
             src={projectImage}
             w={{ base: "100%", "3xl": "100%" }}
-            h={{ base: "200px", "3xl": "200px" }}
+            h={{ base: "250px", "3xl": "250px" }}
             borderRadius="10px"
             p="20px"
             // border="1px dotted white"
@@ -50,6 +58,7 @@ export default function ProjectCard(props) {
               mb="5px"
               fontWeight="bold"
               me="14px"
+              textAlign="center"
             >
               {projectName}
             </Text>
@@ -60,9 +69,24 @@ export default function ProjectCard(props) {
               fontSize={{
                 base: "sm"
               }}
+              fontWeight="1000"
+              mb="5px"
+              me="14px"
+              textAlign="center"
+            >
+              {aboutProject}
+            </Text>
+          </Flex>
+          <Flex direction="row" align="center" justify="Center">
+            <Text
+              color="secondaryGray.300"
+              fontSize={{
+                base: "sm"
+              }}
               fontWeight="400"
               mb="5px"
               me="14px"
+              textAlign="center"
             >
               {techStack}
             </Text>
@@ -80,8 +104,7 @@ export default function ProjectCard(props) {
             gap={{
               base: "20px"
             }}
-            mt="15px"
-            p="25px"
+            p="20px"
           >
             <Link
               href={projectLiveLink}

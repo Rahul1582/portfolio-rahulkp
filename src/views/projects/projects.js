@@ -2,7 +2,9 @@ import React from "react";
 import { Box, SimpleGrid, Flex } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import react from "../../assets/icons/react.svg";
+import nftproject from "../../assets/projects/nft_blockchain_500x300.jpg";
+import medhub from "../../assets/projects/medhub_500x300.jpg";
+import collab from "../../assets/projects/lets_collab_img3.jpg";
 
 export default function Projects() {
   return (
@@ -30,15 +32,32 @@ export default function Projects() {
       </Flex>
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
-        gap="20px"
+        gap="25px"
         alignItems="center"
         justifyContent="center"
       >
-        <ProjectCard image={react} name={"React Project"} />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard
+          projectImage={nftproject}
+          projectName={"NFT Based E-Commerce Website"}
+          aboutProject={"Blockchain based warranty using NFT"}
+          techStack={"EXPRESS JS, NODE JS, REACT JS, MONGODB, SOLIDITY"}
+        />
+        <ProjectCard
+          projectImage={collab}
+          projectName={"LET'S COLLAB"}
+          aboutProject={"A Realtime Chatting Application"}
+          techStack={"EXPRESS JS, NODE JS, REACT JS, MONGODB"}
+        />
+        <ProjectCard
+          projectImage={medhub}
+          projectName={"MedHub-360"}
+          aboutProject={
+            "An Advanced Medical-Healthcare Application To Analyse Medical Reports For Patients And Doctors"
+          }
+          techStack={
+            "JAVASCRIPT, PYTHON, NODE JS, MONGODB, HTML, BOOTSTRAP, CSS,TESSERACT-OCR, FLASK"
+          }
+        />
       </SimpleGrid>
     </Box>
   );
