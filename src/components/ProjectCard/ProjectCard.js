@@ -11,20 +11,28 @@ import {
 } from "@chakra-ui/react";
 
 export default function ProjectCard(props) {
-  const { image, name, download } = props;
+  const { projectImage, techStack, projectName, projectLiveLink, projectLink } = props;
   const textColor = useColorModeValue("navy.700", "white");
   const styles = useStyleConfig("Card");
   return (
-    <Box __css={styles}>
+    <Box
+      __css={styles}
+      transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
+      _hover={{
+        transform: "scale(1.03)",
+        boxShadow: "md",
+        cursor: "pointer"
+      }}
+    >
       <Flex direction={{ base: "column" }} justify="center">
         <Box mb={{ base: "20px", "2xl": "20px" }} position="relative">
           <Image
-            src={image}
+            src={projectImage}
             w={{ base: "100%", "3xl": "100%" }}
             h={{ base: "200px", "3xl": "200px" }}
             borderRadius="10px"
             p="20px"
-            border="1px dotted white"
+            // border="1px dotted white"
           />
         </Box>
         <Flex flexDirection="column" justify="space-between" h="100%">
@@ -43,7 +51,20 @@ export default function ProjectCard(props) {
               fontWeight="bold"
               me="14px"
             >
-              {name}
+              {projectName}
+            </Text>
+          </Flex>
+          <Flex direction="row" align="center" justify="Center">
+            <Text
+              color="secondaryGray.600"
+              fontSize={{
+                base: "sm"
+              }}
+              fontWeight="400"
+              mb="5px"
+              me="14px"
+            >
+              {techStack}
             </Text>
           </Flex>
           <Flex
@@ -63,7 +84,7 @@ export default function ProjectCard(props) {
             p="25px"
           >
             <Link
-              href={download}
+              href={projectLiveLink}
               mt={{
                 base: "0px",
                 md: "10px",
@@ -86,7 +107,7 @@ export default function ProjectCard(props) {
             </Link>
 
             <Link
-              href={download}
+              href={projectLink}
               mt={{
                 base: "0px",
                 md: "10px",
