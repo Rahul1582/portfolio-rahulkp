@@ -55,7 +55,7 @@ export default function Footer() {
             md: "40px"
           }}
         >
-          <Link href="https://www.simmmple.com/licenses?ref=horizon-chakra-free">
+          <Link href="https://github.com/Rahul1582" target="blank">
             <AiFillGithub />
           </Link>
         </ListItem>
@@ -65,7 +65,7 @@ export default function Footer() {
             md: "40px"
           }}
         >
-          <Link href="https://www.simmmple.com/licenses?ref=horizon-chakra-free">
+          <Link href="https://leetcode.com/rahul158_/" target="blank">
             <SiLeetcode />
           </Link>
         </ListItem>
@@ -75,7 +75,7 @@ export default function Footer() {
             md: "40px"
           }}
         >
-          <Link href="https://www.simmmple.com/licenses?ref=horizon-chakra-free">
+          <Link href="https://www.linkedin.com/in/rahulkp15/" target="blank">
             <BiLogoLinkedin />
           </Link>
         </ListItem>
@@ -85,7 +85,7 @@ export default function Footer() {
             md: "40px"
           }}
         >
-          <Link href="https://www.simmmple.com/licenses?ref=horizon-chakra-free">
+          <Link href="https://www.instagram.com/_rahul_patro_/" target="blank">
             <BsInstagram />
           </Link>
         </ListItem>

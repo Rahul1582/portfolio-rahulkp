@@ -24,20 +24,22 @@ export default function ProjectCard(props) {
   return (
     <Box
       __css={styles}
+      h={{ base: "100%", "3xl": "500px" }}
       transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
       _hover={{
         transform: "scale(1.03)",
         boxShadow: "md",
+        borderColor: "white",
+        border: "1px solid",
         cursor: "pointer"
       }}
-      h="500px"
     >
       <Flex direction={{ base: "column" }} justify="center">
         <Box mb={{ base: "10px", "2xl": "10px" }} position="relative">
           <Image
             src={projectImage}
             w={{ base: "100%", "3xl": "100%" }}
-            h={{ base: "250px", "3xl": "250px" }}
+            h={{ base: "100%", "3xl": "250px" }}
             borderRadius="10px"
             p="20px"
             // border="1px dotted white"
@@ -93,7 +95,7 @@ export default function ProjectCard(props) {
           </Flex>
           <Flex
             align="center"
-            justify="space-between"
+            justify="center"
             direction={{
               base: "column",
               md: "column",
@@ -106,31 +108,38 @@ export default function ProjectCard(props) {
             }}
             p="20px"
           >
-            <Link
-              href={projectLiveLink}
-              mt={{
-                base: "0px",
-                md: "10px",
-                lg: "0px",
-                xl: "10px",
-                "2xl": "0px"
-              }}
-            >
-              <Button
-                variant="darkBrand"
-                color="white"
-                fontSize="sm"
-                fontWeight="500"
-                borderRadius="70px"
-                px="24px"
-                py="5px"
-              >
-                View Link
-              </Button>
-            </Link>
-
+            {projectLiveLink ? (
+              <>
+                <Link
+                  href={projectLiveLink}
+                  target="blank"
+                  mt={{
+                    base: "0px",
+                    md: "10px",
+                    lg: "0px",
+                    xl: "10px",
+                    "2xl": "0px"
+                  }}
+                >
+                  <Button
+                    variant="darkBrand"
+                    color="white"
+                    fontSize="sm"
+                    fontWeight="500"
+                    borderRadius="70px"
+                    px="24px"
+                    py="5px"
+                  >
+                    View Link
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <></>
+            )}
             <Link
               href={projectLink}
+              target="blank"
               mt={{
                 base: "0px",
                 md: "10px",
