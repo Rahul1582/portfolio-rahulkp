@@ -24,7 +24,7 @@ export default function ProjectCard(props) {
   return (
     <Box
       __css={styles}
-      h={{ base: "100%", "3xl": "500px" }}
+      h={{ base: "100%", "3xl": "300px" }}
       transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
       _hover={{
         transform: "scale(1.03)",
@@ -130,7 +130,7 @@ export default function ProjectCard(props) {
                     px="24px"
                     py="5px"
                   >
-                    View Link
+                    View Website
                   </Button>
                 </Link>
               </>
@@ -157,7 +157,7 @@ export default function ProjectCard(props) {
                 px="24px"
                 py="5px"
               >
-                View Project
+                {techStack ? "View Project" : "View Blog"}
               </Button>
             </Link>
           </Flex>

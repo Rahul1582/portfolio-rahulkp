@@ -8,6 +8,7 @@ import collab from "../../assets/projects/lets_collab_img3.jpg";
 import blog from "../../assets/projects/bloggers.jpg";
 import eeg from "../../assets/projects/eeg_500x300.jpg";
 import mtrans from "../../assets/projects/mt_500x300.jpg";
+import steg from "../../assets/projects/steg_500x300.jpeg";
 
 export default function Projects() {
   return (
@@ -110,30 +111,22 @@ export default function Projects() {
         />
       </Flex>
       <SimpleGrid
-        columns={{ base: 1, md: 3 }}
+        columns={{ base: 1, md: 2 }}
         gap="50px"
         alignItems="center"
         justifyContent="center"
       >
         <ProjectCard
-          projectImage={eeg}
-          projectName={"Emotion Recognition from Psychological Signals"}
-          aboutProject={
-            "Detection of Human Emotions from EEG signals using the AMIGOS Dataset"
-          }
-          techStack={
-            "PYTORCH, CNN, SVC, PYTHON, FOURIER AND WAVELET TRANSFORMATIONS, STFT, ENTROPY, FEATURE FUSION"
-          }
-          projectLink="https://github.com/Rahul1582/Emotion-Recognition-from-Psychological-Signals"
+          projectImage={steg}
+          projectName={"Steganography Blog Part 1"}
+          aboutProject={"This blog is about hiding text inside an Image"}
+          projectLink="https://rahul1582.medium.com/steganography-6c9af950cbb3"
         />
         <ProjectCard
-          projectImage={mtrans}
-          projectName={"Machine Translation"}
-          aboutProject={
-            "Translated Texts With The Help Of Encoder- Decoder LSTM Model And Attention Mechanism"
-          }
-          techStack={"LSTM, ENCODER-DECODER, ATTENTION MECHANISM"}
-          projectLink="https://github.com/Rahul1582/Bloggers-Arena"
+          projectImage={steg}
+          projectName={"Steganography Blog Part 2"}
+          aboutProject={"This Blog is about hiding an Image inside an Image"}
+          projectLink="https://rahul1582.medium.com/steganography-part-2-ad7452a3ff1"
         />
       </SimpleGrid>
     </Box>
