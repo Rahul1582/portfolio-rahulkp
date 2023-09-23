@@ -58,7 +58,6 @@ export default function ProjectCard(props) {
                 "3xl": "lg"
               }}
               mb="5px"
-              fontWeight="bold"
               me="14px"
               textAlign="center"
             >
@@ -71,7 +70,6 @@ export default function ProjectCard(props) {
               fontSize={{
                 base: "sm"
               }}
-              fontWeight="1000"
               mb="5px"
               me="14px"
               textAlign="center"
@@ -81,11 +79,10 @@ export default function ProjectCard(props) {
           </Flex>
           <Flex direction="row" align="center" justify="Center">
             <Text
-              color="secondaryGray.300"
+              color={textColor}
               fontSize={{
                 base: "sm"
               }}
-              fontWeight="400"
               mb="5px"
               me="14px"
               textAlign="center"
@@ -125,7 +122,7 @@ export default function ProjectCard(props) {
                     variant="darkBrand"
                     color="white"
                     fontSize="sm"
-                    fontWeight="500"
+                    fontFamily="DM Sans"
                     borderRadius="70px"
                     px="24px"
                     py="5px"
@@ -152,7 +149,7 @@ export default function ProjectCard(props) {
                 variant="darkBrand"
                 color="white"
                 fontSize="sm"
-                fontWeight="500"
+                fontFamily="DM Sans"
                 borderRadius="70px"
                 px="24px"
                 py="5px"

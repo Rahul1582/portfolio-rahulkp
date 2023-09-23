@@ -6,9 +6,10 @@ import {
   ListItem,
   Text,
   useColorModeValue,
-  Box
+  useColorMode,
+  IconButton
 } from "@chakra-ui/react";
-
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { AiFillGithub } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
@@ -16,6 +17,7 @@ import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
   const textColor = useColorModeValue("gray.400", "white");
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Flex
@@ -34,6 +36,11 @@ export default function Footer() {
       mt="20px"
       fontSize="20px"
     >
+      <IconButton
+        aria-label="Toggle dark mode"
+        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        onClick={toggleColorMode}
+      />
       <Text
         color={textColor}
         textAlign={{
@@ -44,7 +51,7 @@ export default function Footer() {
       >
         {" "}
         &copy; {1900 + new Date().getYear()}
-        <Text as="span" fontWeight="500" ms="10px">
+        <Text as="span" ms="10px">
           Rahul Kumar Patro • All Rights Reserved
         </Text>
       </Text>

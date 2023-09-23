@@ -40,9 +40,9 @@ export default function Content(props) {
                     ? activeColor
                     : textColor
                 }
-                fontWeight={
-                  activeRoute(route.path.toLowerCase()) ? "bold" : "normal"
-                }
+                //   fontWeight={
+                //   activeRoute(route.path.toLowerCase()) ? "bold" : "normal"
+                // }
               >
                 {route.name}
               </Text>
