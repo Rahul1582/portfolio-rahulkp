@@ -43,8 +43,8 @@ export default function Sidenav(props) {
             ></Flex>
           </Flex>
 
-          <Stack direction="column" mb="auto" mt="50px">
-            <Box ps="20px" pe={{ md: "16px", "2xl": "1px" }}>
+          <Stack direction="column" mb="50px" mt="100px">
+            <Box ps="15px" pe={{ md: "16px", "2xl": "1px" }}>
               <Content routes={routes} />
             </Box>
           </Stack>
