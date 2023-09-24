@@ -97,7 +97,7 @@ export default function ProjectCard(props) {
               base: "column",
               md: "column",
               lg: "row",
-              xl: "column",
+              xl: "row",
               "2xl": "row"
             }}
             gap={{

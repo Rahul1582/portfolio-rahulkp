@@ -32,7 +32,7 @@ export default function Sidenav(props) {
           borderRadius="30px"
         >
           <Flex align="center" direction="column" fontSize="20px">
-            <Text fontSize="20px" color={activeColor} fontWeight="bold">
+            <Text fontSize="20px" color={activeColor}>
               RAHUL'S PORTFOLIO
             </Text>
             <Flex

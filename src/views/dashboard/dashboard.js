@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-      <Flex align="center" justify="center" height="400px">
+      {/* <Flex align="center" justify="center" height="400px">
         <Box
           w="500px" // Adjust the size of the circle as needed
           h="500px"
@@ -47,7 +47,7 @@ export default function Dashboard() {
           ))}
           HI, THIS IS RAHUL KUMAR PATRO
         </Box>
-      </Flex>
+      </Flex> */}
     </Box>
   );
 }
