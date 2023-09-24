@@ -11,7 +11,7 @@ export default function Sidenav(props) {
     "unset"
   );
   // Chakra Color Mode
-  let sidenavBg = useColorModeValue("white", "navy.800");
+  let sidenavBg = useColorModeValue("white", "navyBlue.300");
 
   return (
     <Box display={{ xl: "block" }} w="100%" position="fixed" minH="100%">

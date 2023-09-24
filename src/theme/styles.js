@@ -74,6 +74,12 @@ export const globalStyles = {
       800: "#111c44",
       900: "#0b1437"
     },
+    navyBlue: {
+      100: "#192734",
+      200: "#152f47",
+      300: "#022a4f",
+      400: "#02203b"
+    },
     gray: {
       100: "#FAFCFE"
     }
@@ -82,7 +88,7 @@ export const globalStyles = {
     global: (props) => ({
       body: {
         overflowX: "hidden",
-        bg: mode("secondaryGray.300", "navy.900")(props),
+        bg: mode("secondaryGray.300", "navyBlue.400")(props),
         fontFamily: "Lilita One",
         fontWeight: "200"
         // letterSpacing: "-0.5px"

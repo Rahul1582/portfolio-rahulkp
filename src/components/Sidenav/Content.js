@@ -9,7 +9,7 @@ export default function Content(props) {
 
   let activeIcon = useColorModeValue("brand.500", "white");
   let textColor = useColorModeValue("secondaryGray.500", "white");
-  let brandColor = useColorModeValue("brand.500", "brand.400");
+  let brandColor = useColorModeValue("brand.500", "white");
 
   const activeRoute = (routeName) => {
     return currentlocation.pathname.includes(routeName);

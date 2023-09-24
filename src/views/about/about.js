@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  SimpleGrid,
+  Grid,
+  useStyleConfig,
+  Image
+} from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
@@ -16,8 +23,11 @@ import git from "../../assets/icons/git.svg";
 import gitlab from "../../assets/icons/gitlab.svg";
 import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
+import myphoto from "../../assets/aboutMePhoto.jpg";
 
 export default function About() {
+  const styles = useStyleConfig("Card");
+
   const getActiveRoute = (routes) => {
     console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
@@ -42,6 +52,30 @@ export default function About() {
             style={{ fontSize: "3em" }}
             cursor={false}
           /> */}
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              lg: "1.34fr 1.62fr"
+            }}
+            templateRows={{
+              base: "repeat(2, 1fr)",
+              lg: "1fr"
+            }}
+            gap={{ base: "20px", xl: "20px" }}
+          >
+            <Box __css={styles}>
+              {" "}
+              <Image
+                src={myphoto}
+                w={{ base: "100%", "3xl": "100%" }}
+                h={{ base: "100%", "3xl": "250px" }}
+                borderRadius="20px"
+                p="20px"
+                // border="1px dotted white"
+              />
+            </Box>
+            <Box __css={styles}>hfhf</Box>
+          </Grid>
         </Flex>
 
         <Flex

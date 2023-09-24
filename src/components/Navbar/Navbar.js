@@ -15,12 +15,9 @@ export default function Navbar(props) {
   let mainText = useColorModeValue("navy.700", "white");
   let navbarPosition = "fixed";
   let navbarFilter = "none";
-  let navbarBackdrop = "blur(20px)";
+  let navbarBackdrop = "blur(10px)";
   let navbarShadow = "none";
-  let navbarBg = useColorModeValue(
-    "rgba(244, 247, 254, 0.2)",
-    "rgba(11,20,55,0.5)"
-  );
+  let navbarBg = useColorModeValue("rgba(244, 247, 254, 0.2)", "");
   let navbarBorder = "transparent";
   let secondaryMargin = "0px";
   let paddingX = "15px";
@@ -78,7 +75,10 @@ export default function Navbar(props) {
             color={mainText}
             bg="inherit"
             borderRadius="inherit"
-            fontSize="3em"
+            fontSize={{
+              base: "1.5em",
+              xl: "3em"
+            }}
             _hover={{ color: { mainText } }}
             _active={{
               bg: "inherit",
