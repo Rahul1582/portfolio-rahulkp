@@ -22,14 +22,14 @@ export default function About() {
     console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].name;
+        return routes[i].navbarDisplayName;
       }
     }
   };
 
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)}/>
+      <Navbar displayText={getActiveRoute(routes)} />
       <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
         <Flex
           direction="row"
@@ -37,17 +37,17 @@ export default function About() {
           alignItems="center"
           mb="40px"
         >
-          <TypeAnimation
+          {/* <TypeAnimation
             sequence={["ABOUT ME", 500, "ABOUT", 500, "ABOUT ME", 500]}
             style={{ fontSize: "3em" }}
             cursor={false}
-          />
+          /> */}
         </Flex>
 
         <Flex
           direction="row"
-          justifyContent="center"
-          alignItems="center"
+          justifyContent="start"
+          alignItems="start"
           mb="40px"
         >
           <TypeAnimation

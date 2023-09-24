@@ -1,8 +1,19 @@
 import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
+import Navbar from "../../components/Navbar/Navbar";
+import routes from "../../routes";
 import dashboardimg from "../../assets/dashboard.svg";
 
 export default function Dashboard() {
+  const getActiveRoute = (routes) => {
+    console.log(window.location.href);
+    for (let i = 0; i < routes.length; i++) {
+      if (window.location.href.indexOf(routes[i].path) !== -1) {
+        return routes[i].navbarDisplayName;
+      }
+    }
+  };
+
   const images = [
     dashboardimg,
     dashboardimg,
@@ -17,8 +28,10 @@ export default function Dashboard() {
   const circleRadius = 350;
 
   return (
-    <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-      {/* <Flex align="center" justify="center" height="400px">
+    <Box>
+      <Navbar displayText={getActiveRoute(routes)} />
+      <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
+        {/* <Flex align="center" justify="center" height="400px">
         <Box
           w="500px" // Adjust the size of the circle as needed
           h="500px"
@@ -48,6 +61,7 @@ export default function Dashboard() {
           HI, THIS IS RAHUL KUMAR PATRO
         </Box>
       </Flex> */}
+      </Box>
     </Box>
   );
 }

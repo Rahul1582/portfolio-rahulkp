@@ -1,11 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Flex, Box, useColorModeValue, Link } from "@chakra-ui/react";
-import routes from "../../routes";
+import React from "react";
+import {
+  Flex,
+  Box,
+  useColorModeValue,
+  Link,
+  IconButton,
+  useColorMode
+} from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export default function Navbar(props) {
   const { displayText } = props;
+  const { colorMode, toggleColorMode } = useColorMode();
   let mainText = useColorModeValue("navy.700", "white");
-  let secondaryText = useColorModeValue("gray.700", "white");
   let navbarPosition = "fixed";
   let navbarFilter = "none";
   let navbarBackdrop = "blur(20px)";
@@ -30,10 +37,9 @@ export default function Navbar(props) {
       backgroundPosition="center"
       backgroundSize="cover"
       alignItems={{ xl: "center" }}
-      minH="75px"
       justifyContent={{ xl: "center" }}
       display={"flex"}
-      lineHeight="25.6px"
+      lineHeight="20px"
       mx="auto"
       mt={secondaryMargin}
       pb="8px"
@@ -43,12 +49,12 @@ export default function Navbar(props) {
         md: "10px"
       }}
       ps={{
+        base: "12px",
         xl: "12px"
       }}
-      pt="8px"
-      top={{ base: "12px", md: "16px", lg: "20px", xl: "20px" }}
+      top="0px"
       w={{
-        base: "calc(100vw - 6%)",
+        base: "100%",
         md: "calc(100vw - 8%)",
         lg: "calc(100vw - 6%)",
         xl: "calc(100vw - 350px)",
@@ -58,20 +64,21 @@ export default function Navbar(props) {
     >
       <Flex
         w="100%"
-        flexDirection={{
-          sm: "column",
-          md: "row"
-        }}
+        flexDirection="row"
+        justifyContent="space-between"
         alignItems={{ xl: "center" }}
         mb={gap}
+        pt="20px"
+        ps={{
+          base: "12px"
+        }}
       >
-        <Box mb={{ sm: "8px", md: "0px" }}>
+        <Box>
           <Link
             color={mainText}
-            href="#"
             bg="inherit"
             borderRadius="inherit"
-            fontSize="34px"
+            fontSize="3em"
             _hover={{ color: { mainText } }}
             _active={{
               bg: "inherit",
@@ -84,6 +91,13 @@ export default function Navbar(props) {
           >
             {displayText}
           </Link>
+        </Box>
+        <Box>
+          <IconButton
+            aria-label="Toggle dark mode"
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={toggleColorMode}
+          />
         </Box>
       </Flex>
     </Box>

@@ -1,7 +1,6 @@
 import "./App.css";
 import Sidenav from "./components/Sidenav/Sidenav";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
 import routes from "./routes.js";
 import { Box } from "@chakra-ui/react";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";

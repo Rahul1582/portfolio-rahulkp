@@ -4,8 +4,6 @@ import { Icon } from "@chakra-ui/react";
 import {
   MdDashboard,
   MdBarChart,
-  MdPerson,
-  MdHome,
   MdPersonPin,
   MdCode,
   MdContacts
@@ -20,36 +18,41 @@ const routes = [
   {
     name: "Dashboard",
     path: "/dashboard",
+    navbarDisplayName: "HOME",
     icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />,
     component: Dashboard
   },
   {
     name: "About Me",
     path: "/about",
+    navbarDisplayName: "ABOUT",
     icon: <Icon as={MdPersonPin} width="20px" height="20px" color="inherit" />,
     component: About
   },
   {
     name: "Resume",
     path: "/resume",
+    navbarDisplayName: "RESUME",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     component: Resume
   },
   {
     name: "Projects And Blogs",
     path: "/projects",
+    navbarDisplayName: "PROJECTS",
     icon: <Icon as={MdCode} width="20px" height="20px" color="inherit" />,
     component: Projects
   },
-  {
-    name: "Hobbies",
-    path: "/hobbies",
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
-    // component: Profile
-  },
+  // {
+  //   name: "Hobbies",
+  //   path: "/hobbies",
+  //   icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
+  //   // component: Profile
+  // },
   {
     name: "Contact Me",
     path: "/contact",
+    navbarDisplayName: "CONTACT",
     icon: <Icon as={MdContacts} width="20px" height="20px" color="inherit" />
     // component: Profile
   }
