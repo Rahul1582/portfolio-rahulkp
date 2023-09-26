@@ -11,6 +11,7 @@ import { TypeAnimation } from "react-type-animation";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
+import AboutMeInfo from "../../components/aboutMeInfo/aboutMeInfo";
 import angular from "../../assets/icons/angular.svg";
 import typescript from "../../assets/icons/typescript.svg";
 import node from "../../assets/icons/nodejs.svg";
@@ -74,7 +75,18 @@ export default function About() {
               />
             </Box>
             <Box __css={styles} border="none">
-              hfhf
+              <SimpleGrid columns="2" gap="20px">
+                <AboutMeInfo
+                  title="Current Organisation"
+                  value="Truminds Software Systems"
+                />
+                <AboutMeInfo
+                  title="Designation"
+                  value="Software Development Engineer - 1"
+                />
+                <AboutMeInfo title="Education" value="BIT Mesra, Ranchi" />
+                <AboutMeInfo title="Languages" value="English, Hindi, Odia" />
+              </SimpleGrid>
             </Box>
           </Grid>
         </Flex>

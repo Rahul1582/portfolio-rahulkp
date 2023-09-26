@@ -29,7 +29,6 @@ export default function ProjectCard(props) {
       _hover={{
         transform: "scale(1.03)",
         boxShadow: "md",
-        borderColor: "white",
         border: "1px solid",
         cursor: "pointer"
       }}
