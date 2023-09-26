@@ -29,7 +29,6 @@ export default function About() {
   const styles = useStyleConfig("Card");
 
   const getActiveRoute = (routes) => {
-    console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
         return routes[i].navbarDisplayName;
@@ -63,7 +62,7 @@ export default function About() {
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
-            <Box __css={styles}>
+            <Box __css={styles} border="none">
               {" "}
               <Image
                 src={myphoto}
@@ -74,7 +73,9 @@ export default function About() {
                 // border="1px dotted white"
               />
             </Box>
-            <Box __css={styles}>hfhf</Box>
+            <Box __css={styles} border="none">
+              hfhf
+            </Box>
           </Grid>
         </Flex>
 

@@ -14,7 +14,6 @@ import steg from "../../assets/projects/steg_500x300.jpeg";
 
 export default function Projects() {
   const getActiveRoute = (routes) => {
-    console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
         return routes[i].navbarDisplayName;

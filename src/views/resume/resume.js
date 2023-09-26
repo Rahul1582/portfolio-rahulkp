@@ -7,7 +7,6 @@ import { Box, useStyleConfig, Flex } from "@chakra-ui/react";
 export default function Resume() {
   const styles = useStyleConfig("Card");
   const getActiveRoute = (routes) => {
-    console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
         return routes[i].navbarDisplayName;
@@ -32,7 +31,6 @@ export default function Resume() {
             height={{ base: "60vh", md: "100vh", xl: "150vh" }}
             overflow="hidden"
             borderRadius="md"
-            style={{ border: "1px solid white" }}
           >
             <iframe
               src="https://drive.google.com/file/d/143ZCD6FQKXtLn6H42kBR1p6geZjsU6fQ/preview"

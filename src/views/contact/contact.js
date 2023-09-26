@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar/Navbar";
 
 export default function Contact() {
   const getActiveRoute = (routes) => {
-    console.log(window.location.href);
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
         return routes[i].navbarDisplayName;

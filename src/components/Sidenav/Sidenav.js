@@ -23,6 +23,7 @@ export default function Sidenav(props) {
         minH="100%"
         overflowX="hidden"
         boxShadow={shadow}
+        
       >
         <Flex
           direction="column"
