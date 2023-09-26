@@ -8,6 +8,7 @@ import {
   useColorMode
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import bg from "../../assets/giphy (1).gif";
 
 export default function Navbar(props) {
   const { displayText } = props;

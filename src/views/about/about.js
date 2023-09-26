@@ -5,7 +5,9 @@ import {
   SimpleGrid,
   Grid,
   useStyleConfig,
-  Image
+  Image,
+  Text,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "../../components/Navbar/Navbar";
@@ -25,9 +27,11 @@ import gitlab from "../../assets/icons/gitlab.svg";
 import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
 import myphoto from "../../assets/aboutMePhoto.jpg";
+import bg from "../../assets/giphy (1).gif";
 
 export default function About() {
   const styles = useStyleConfig("Card");
+  const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -63,31 +67,47 @@ export default function About() {
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
-            <Box __css={styles} border="none">
+            <Box __css={styles} border="none" bg="transparent">
               {" "}
               <Image
                 src={myphoto}
                 w={{ base: "100%", "3xl": "100%" }}
                 h={{ base: "100%", "3xl": "250px" }}
                 borderRadius="20px"
+                border="1px solid white"
                 p="20px"
-                // border="1px dotted white"
               />
             </Box>
-            <Box __css={styles} border="none">
-              <SimpleGrid columns="2" gap="20px">
-                <AboutMeInfo
-                  title="Current Organisation"
-                  value="Truminds Software Systems"
-                />
-                <AboutMeInfo
-                  title="Designation"
-                  value="Software Development Engineer - 1"
-                />
-                <AboutMeInfo title="Education" value="BIT Mesra, Ranchi" />
-                <AboutMeInfo title="Languages" value="English, Hindi, Odia" />
-              </SimpleGrid>
-            </Box>
+            <Flex
+              direction="column"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Box __css={styles} border="none" bg="transparent">
+                <Text
+                  color={textColorPrimary}
+                  fontSize="2xl"
+                  mb="40px"
+                  textAlign="center"
+                >
+                  GENERAL INFORMATION
+                </Text>
+                <SimpleGrid columns="2" gap="20px">
+                  <AboutMeInfo
+                    title="Current Organisation"
+                    value="Truminds Software Systems"
+                  />
+                  <AboutMeInfo
+                    title="Designation"
+                    value="Software Development Engineer - 1"
+                  />
+                  <AboutMeInfo title="Location" value="Bengaluru, Karnataka" />
+                  <AboutMeInfo title="Education" value="BIT Mesra, Ranchi" />
+                  <AboutMeInfo title="Degree" value="Masters" />
+                  <AboutMeInfo title="Languages" value="English, Hindi, Odia" />
+                </SimpleGrid>
+              </Box>
+            </Flex>
           </Grid>
         </Flex>
 
