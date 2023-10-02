@@ -32,6 +32,10 @@ import bg from "../../assets/giphy (1).gif";
 export default function About() {
   const styles = useStyleConfig("Card");
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
+  const cardShadow = useColorModeValue(
+    "0px 18px 40px rgba(112, 144, 176, 0.12)",
+    "unset"
+  );
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -74,7 +78,7 @@ export default function About() {
                 w={{ base: "100%", "3xl": "100%" }}
                 h={{ base: "100%", "3xl": "250px" }}
                 borderRadius="20px"
-                border="1px solid white"
+                __css={styles}
                 p="20px"
               />
             </Box>
@@ -94,17 +98,35 @@ export default function About() {
                 </Text>
                 <SimpleGrid columns="2" gap="20px">
                   <AboutMeInfo
+                    boxShadow={cardShadow}
                     title="Current Organisation"
                     value="Truminds Software Systems"
                   />
                   <AboutMeInfo
+                    boxShadow={cardShadow}
                     title="Designation"
                     value="Software Development Engineer - 1"
                   />
-                  <AboutMeInfo title="Location" value="Bengaluru, Karnataka" />
-                  <AboutMeInfo title="Education" value="BIT Mesra, Ranchi" />
-                  <AboutMeInfo title="Degree" value="Masters" />
-                  <AboutMeInfo title="Languages" value="English, Hindi, Odia" />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Location"
+                    value="Bengaluru, Karnataka"
+                  />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Education"
+                    value="BIT Mesra, Ranchi"
+                  />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Degree"
+                    value="Masters"
+                  />
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Languages"
+                    value="English, Hindi, Odia"
+                  />
                 </SimpleGrid>
               </Box>
             </Flex>
