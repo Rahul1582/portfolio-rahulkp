@@ -174,6 +174,28 @@ export default function About() {
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
         </SimpleGrid>
+
+        <Flex
+          direction="row"
+          justifyContent="start"
+          alignItems="start"
+          mb="40px"
+        >
+          <TypeAnimation
+            sequence={[
+              "MY",
+              500,
+              "MY GITHUB CONTRIBUTIONS",
+              500,
+              "MY GITHUB",
+              500,
+              "MY GITHUB CONTRIBUTIONS",
+              500
+            ]}
+            style={{ fontSize: "3em" }}
+            cursor={false}
+          />
+        </Flex>
       </Box>
     </Box>
   );

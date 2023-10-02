@@ -12,6 +12,7 @@ export default function Sidenav(props) {
   );
   // Chakra Color Mode
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
+  let navbarBorderColor = useColorModeValue("brand.400", "white");
 
   return (
     <Box display={{ xl: "block" }} w="100%" position="fixed" minH="100%">
@@ -23,7 +24,8 @@ export default function Sidenav(props) {
         minH="100%"
         overflowX="hidden"
         boxShadow={shadow}
-        
+        borderRight="2px solid"
+        borderColor={navbarBorderColor}
       >
         <Flex
           direction="column"

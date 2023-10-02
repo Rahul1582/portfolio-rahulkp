@@ -20,6 +20,7 @@ export default function Navbar(props) {
   let navbarShadow = "none";
   let navbarBg = useColorModeValue("rgba(244, 247, 254, 0.2)", "");
   let navbarBorder = "transparent";
+  let navbarBorderColor = useColorModeValue("brand.400", "white");
   let secondaryMargin = "0px";
   let paddingX = "15px";
   let gap = "0px";
@@ -29,7 +30,7 @@ export default function Navbar(props) {
       position={navbarPosition}
       boxShadow={navbarShadow}
       bg={navbarBg}
-      borderColor={navbarBorder}
+      // borderColor={navbarBorder}
       filter={navbarFilter}
       backdropFilter={navbarBackdrop}
       backgroundPosition="center"
@@ -71,6 +72,7 @@ export default function Navbar(props) {
           base: "12px"
         }}
       >
+        <Box></Box>
         <Box>
           <Link
             color={mainText}
@@ -89,6 +91,8 @@ export default function Navbar(props) {
             _focus={{
               boxShadow: "none"
             }}
+            borderBottom="2px solid"
+            borderColor={navbarBorderColor}
           >
             {displayText}
           </Link>
