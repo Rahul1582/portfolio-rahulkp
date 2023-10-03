@@ -33,8 +33,11 @@ import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   const styles = useStyleConfig("Card");
-  const { colorMode, toggleColorMode } = useColorMode();
-  const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
+  const { colorMode } = useColorMode();
+  const textColorPrimary = useColorModeValue(
+    "secondaryGray.900",
+    "lightgreen.100"
+  );
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
@@ -142,20 +145,9 @@ export default function About() {
           alignItems="center"
           mb="40px"
         >
-          <TypeAnimation
-            sequence={[
-              "MY",
-              500,
-              "MY SKILLSET",
-              500,
-              "MY",
-              500,
-              "MY SKILLSET",
-              500
-            ]}
-            style={{ fontSize: "3em" }}
-            cursor={false}
-          />
+          <Text color={textColorPrimary} fontSize="2em" textAlign="center">
+            MY SKILLSET
+          </Text>
         </Flex>
         <SimpleGrid
           columns={{ base: 2, md: 2, lg: 3, xl: 6, "2xl": 6 }}
@@ -185,20 +177,9 @@ export default function About() {
           mb="40px"
           mt="40px"
         >
-          <TypeAnimation
-            sequence={[
-              "MY",
-              500,
-              "MY GITHUB CONTRIBUTIONS",
-              500,
-              "MY GITHUB",
-              500,
-              "MY GITHUB CONTRIBUTIONS",
-              500
-            ]}
-            style={{ fontSize: "3em" }}
-            cursor={false}
-          />
+          <Text color={textColorPrimary} fontSize="2em" textAlign="center">
+            GITHUB CONTRIBUTIONS
+          </Text>
         </Flex>
         <Box display="flex" justifyContent="center" alignItems="center">
           <GitHubCalendar
