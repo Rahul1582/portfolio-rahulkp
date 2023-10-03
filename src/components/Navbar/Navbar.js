@@ -13,7 +13,7 @@ import bg from "../../assets/giphy (1).gif";
 export default function Navbar(props) {
   const { displayText } = props;
   const { colorMode, toggleColorMode } = useColorMode();
-  let mainText = useColorModeValue("navy.700", "white");
+  let mainText = useColorModeValue("navy.700", "lightgreen.100");
   let navbarPosition = "fixed";
   let navbarFilter = "none";
   let navbarBackdrop = "blur(10px)";

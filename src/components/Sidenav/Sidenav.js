@@ -4,7 +4,7 @@ import Content from "./Content";
 
 export default function Sidenav(props) {
   const { routes } = props;
-  let activeColor = useColorModeValue("gray.700", "white");
+  let activeColor = useColorModeValue("gray.700", "#64CCC5");
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
@@ -12,7 +12,7 @@ export default function Sidenav(props) {
   );
   // Chakra Color Mode
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
-  let navbarBorderColor = useColorModeValue("brand.400", "white");
+  let navbarBorderColor = useColorModeValue("brand.400", "#64CCC5");
 
   return (
     <Box display={{ xl: "block" }} w="100%" position="fixed" minH="100%">

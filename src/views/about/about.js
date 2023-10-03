@@ -7,7 +7,8 @@ import {
   useStyleConfig,
   Image,
   Text,
-  useColorModeValue
+  useColorModeValue,
+  useColorMode
 } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import Navbar from "../../components/Navbar/Navbar";
@@ -32,6 +33,7 @@ import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   const styles = useStyleConfig("Card");
+  const { colorMode, toggleColorMode } = useColorMode();
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
@@ -199,7 +201,10 @@ export default function About() {
           />
         </Flex>
         <Box display="flex" justifyContent="center" alignItems="center">
-          <GitHubCalendar username="rahul1582" />
+          <GitHubCalendar
+            username="rahul1582"
+            colorScheme={colorMode === "light" ? "light" : "dark"}
+          />
         </Box>
       </Box>
     </Box>

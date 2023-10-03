@@ -19,28 +19,28 @@ const routes = [
   {
     name: "Dashboard",
     path: "/dashboard",
-    navbarDisplayName: "HOME",
+    navbarDisplayName: "Home",
     icon: <Icon as={MdDashboard} width="30px" height="30px" color="inherit" />,
     component: Dashboard
   },
   {
     name: "About Me",
     path: "/about",
-    navbarDisplayName: "ABOUT",
+    navbarDisplayName: "About",
     icon: <Icon as={MdPersonPin} width="30px" height="30px" color="inherit" />,
     component: About
   },
   {
     name: "Resume",
     path: "/resume",
-    navbarDisplayName: "RESUME",
+    navbarDisplayName: "Resume",
     icon: <Icon as={MdBarChart} width="30px" height="30px" color="inherit" />,
     component: Resume
   },
   {
     name: "Projects And Blogs",
     path: "/projects",
-    navbarDisplayName: "PROJECTS AND BLOGS",
+    navbarDisplayName: "Projects And Blogs",
     icon: <Icon as={MdCode} width="30px" height="30px" color="inherit" />,
     component: Projects
   },
@@ -53,7 +53,7 @@ const routes = [
   {
     name: "Contact Me",
     path: "/contact",
-    navbarDisplayName: "CONTACT",
+    navbarDisplayName: "Contact",
     icon: <Icon as={MdContacts} width="30px" height="30px" color="inherit" />,
     component: Contact
   }

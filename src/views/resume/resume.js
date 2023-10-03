@@ -37,7 +37,7 @@ export default function Resume() {
               title="Resume"
               width="100%"
               height="100%"
-              style={{ border: "5px solid white" }}
+              style={{ border: "5px solid lightgreen.100" }}
             ></iframe>
           </Box>
         </Flex>
