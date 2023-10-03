@@ -72,7 +72,6 @@ export default function Navbar(props) {
           base: "12px"
         }}
       >
-        <Box></Box>
         <Box>
           <Link
             color={mainText}

@@ -28,6 +28,7 @@ import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
 import myphoto from "../../assets/aboutMePhoto.jpg";
 import bg from "../../assets/giphy (1).gif";
+import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   const styles = useStyleConfig("Card");
@@ -135,8 +136,8 @@ export default function About() {
 
         <Flex
           direction="row"
-          justifyContent="start"
-          alignItems="start"
+          justifyContent="center"
+          alignItems="center"
           mb="40px"
         >
           <TypeAnimation
@@ -177,9 +178,10 @@ export default function About() {
 
         <Flex
           direction="row"
-          justifyContent="start"
-          alignItems="start"
+          justifyContent="center"
+          alignItems="center"
           mb="40px"
+          mt="40px"
         >
           <TypeAnimation
             sequence={[
@@ -196,6 +198,9 @@ export default function About() {
             cursor={false}
           />
         </Flex>
+        <Box display="flex" justifyContent="center" alignItems="center">
+          <GitHubCalendar username="rahul1582" />
+        </Box>
       </Box>
     </Box>
   );
