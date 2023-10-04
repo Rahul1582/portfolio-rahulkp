@@ -41,7 +41,8 @@ export default function ProjectCard(props) {
             h={{ base: "100%", "3xl": "250px" }}
             borderRadius="10px"
             p="20px"
-            // border="1px dotted white"
+            // border="2px solid"
+            // borderColor={textColor}
           />
         </Box>
         <Flex flexDirection="column" justify="space-between" h="100%">

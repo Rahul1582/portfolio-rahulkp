@@ -79,7 +79,7 @@ export default function Navbar(props) {
             borderRadius="inherit"
             fontSize={{
               base: "1.5em",
-              xl: "3em"
+              xl: "2.5em"
             }}
             _hover={{ color: { mainText } }}
             _active={{

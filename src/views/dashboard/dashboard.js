@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
-import dashboardimg from "../../assets/dashboard.svg";
+import dashboardimg from "../../assets/dashboard.avif";
 
 export default function Dashboard() {
   const getActiveRoute = (routes) => {
@@ -30,6 +30,7 @@ export default function Dashboard() {
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
       <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
+        {/* <img src={dashboardimg} /> */}
         {/* <Flex align="center" justify="center" height="400px">
         <Box
           w="500px" // Adjust the size of the circle as needed

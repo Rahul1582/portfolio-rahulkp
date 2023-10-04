@@ -30,22 +30,7 @@ export default function Projects() {
           justifyContent="center"
           alignItems="center"
           mb="40px"
-        >
-          {/* <TypeAnimation
-            sequence={[
-              "PROJECTS",
-              500,
-              "PROJECTS AND BLOGS",
-              500,
-              "PROJECTS",
-              500,
-              "PROJECTS AND BLOGS",
-              500
-            ]}
-            style={{ fontSize: "3em" }}
-            cursor={false}
-          /> */}
-        </Flex>
+        ></Flex>
         <SimpleGrid
           columns={{ base: 1, md: 3 }}
           gap="25px"
