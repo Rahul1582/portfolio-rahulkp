@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  useStyleConfig,
-  Flex,
-  Image,
-  useColorModeValue
-} from "@chakra-ui/react";
+import { Box, useStyleConfig, Flex, Image } from "@chakra-ui/react";
 
 export default function TechStackCard(props) {
   const { imagepath } = { ...props };

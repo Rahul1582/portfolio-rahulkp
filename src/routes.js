@@ -19,31 +19,32 @@ const routes = [
   {
     name: "Dashboard",
     path: "/dashboard",
-    navbarDisplayName: "Home",
+    navbarDisplayName: "<Home/>",
     icon: <Icon as={MdDashboard} width="30px" height="30px" color="inherit" />,
     component: Dashboard
   },
   {
     name: "About Me",
     path: "/about",
-    navbarDisplayName: "About",
+    navbarDisplayName: "<About/>",
     icon: <Icon as={MdPersonPin} width="30px" height="30px" color="inherit" />,
     component: About
   },
   {
-    name: "Resume",
-    path: "/resume",
-    navbarDisplayName: "Resume",
-    icon: <Icon as={MdBarChart} width="30px" height="30px" color="inherit" />,
-    component: Resume
-  },
-  {
     name: "Projects And Blogs",
     path: "/projects",
-    navbarDisplayName: "Projects And Blogs",
+    navbarDisplayName: "<Projects And Blogs/>",
     icon: <Icon as={MdCode} width="30px" height="30px" color="inherit" />,
     component: Projects
   },
+  {
+    name: "Resume",
+    path: "/resume",
+    navbarDisplayName: "<Resume/>",
+    icon: <Icon as={MdBarChart} width="30px" height="30px" color="inherit" />,
+    component: Resume
+  },
+
   // {
   //   name: "Hobbies",
   //   path: "/hobbies",
@@ -53,7 +54,7 @@ const routes = [
   {
     name: "Contact Me",
     path: "/contact",
-    navbarDisplayName: "Contact",
+    navbarDisplayName: "<Contact/>",
     icon: <Icon as={MdContacts} width="30px" height="30px" color="inherit" />,
     component: Contact
   }

@@ -1,6 +1,14 @@
-import { Box, Flex, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Stack,
+  Text,
+  useColorModeValue
+} from "@chakra-ui/react";
 import React from "react";
 import Content from "./Content";
+import sidenav from "../../assets/dashboard.png";
 
 export default function Sidenav(props) {
   const { routes } = props;
@@ -35,18 +43,10 @@ export default function Sidenav(props) {
           borderRadius="30px"
         >
           <Flex align="center" direction="column" fontSize="20px">
-            <Text fontSize="20px" color={activeColor}>
-              RAHUL'S PORTFOLIO
-            </Text>
-            <Flex
-              h="4px"
-              w="100%"
-              bg="rgba(135, 140, 189, 0.3)"
-              mt="20px"
-            ></Flex>
+            <Image src={sidenav}></Image>
           </Flex>
 
-          <Stack direction="column" mb="50px" mt="100px">
+          <Stack direction="column" mb="50px" mt="20px">
             <Box ps="15px" pe={{ md: "16px", "2xl": "1px" }}>
               <Content routes={routes} />
             </Box>

@@ -1,5 +1,11 @@
 import React from "react";
-import { Box, SimpleGrid, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  SimpleGrid,
+  Flex,
+  Text,
+  useColorModeValue
+} from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
@@ -13,6 +19,10 @@ import mtrans from "../../assets/projects/mt_500x300.jpg";
 import steg from "../../assets/projects/steg_500x300.jpeg";
 
 export default function Projects() {
+  const textColorPrimary = useColorModeValue(
+    "secondaryGray.900",
+    "lightgreen.100"
+  );
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
@@ -96,16 +106,14 @@ export default function Projects() {
         </SimpleGrid>
         <Flex
           direction="row"
-          justifyContent="start"
-          alignItems="start"
+          justifyContent="center"
+          alignItems="Center"
           mt="40px"
           mb="40px"
         >
-          {/* <TypeAnimation
-            sequence={["BLOGS"]}
-            style={{ fontSize: "3em" }}
-            cursor={false}
-          /> */}
+          <Text color={textColorPrimary} fontSize="2em" textAlign="center">
+            {"<BLOGS/>"}
+          </Text>
         </Flex>
         <SimpleGrid
           columns={{ base: 1, md: 2 }}

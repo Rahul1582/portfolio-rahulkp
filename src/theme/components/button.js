@@ -32,10 +32,10 @@ export const buttonStyles = {
           }
         }),
         darkBrand: (props) => ({
-          bg: mode("brand.400", "brand.900")(props),
+          bg: mode("brand.400", "lightgreen.100")(props),
           color: "white",
           _focus: {
-            bg: mode("brand.900", "brand.400")(props)
+            bg: mode("lightgreen.100", "brand.400")(props)
           },
           _active: {
             bg: mode("brand.900", "brand.400")(props)

@@ -10,7 +10,6 @@ import {
   useColorModeValue,
   useColorMode
 } from "@chakra-ui/react";
-import { TypeAnimation } from "react-type-animation";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
@@ -28,7 +27,6 @@ import gitlab from "../../assets/icons/gitlab.svg";
 import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
 import myphoto from "../../assets/aboutMePhoto.jpg";
-import bg from "../../assets/giphy (1).gif";
 import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
@@ -100,7 +98,7 @@ export default function About() {
                   mb="40px"
                   textAlign="center"
                 >
-                  GENERAL INFORMATION
+                  {"<GENERAL INFORMATION/>"}
                 </Text>
                 <SimpleGrid columns="2" gap="20px">
                   <AboutMeInfo
@@ -146,7 +144,7 @@ export default function About() {
           mb="40px"
         >
           <Text color={textColorPrimary} fontSize="2em" textAlign="center">
-            MY SKILLSET
+            {"<MY SKILLSET/>"}
           </Text>
         </Flex>
         <SimpleGrid
@@ -178,7 +176,7 @@ export default function About() {
           mt="40px"
         >
           <Text color={textColorPrimary} fontSize="2em" textAlign="center">
-            GITHUB CONTRIBUTIONS
+            {"<MY GITHUB CONTRIBUTIONS/>"}
           </Text>
         </Flex>
         <Box display="flex" justifyContent="center" alignItems="center">
