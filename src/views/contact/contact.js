@@ -2,6 +2,7 @@ import React from "react";
 import {
   Box,
   Flex,
+  Icon,
   Image,
   SimpleGrid,
   Text,
@@ -12,6 +13,8 @@ import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
 import contactimg from "../../assets/contact.png";
 import contactimg1 from "../../assets/contact1.png";
+import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact() {
   const styles = useStyleConfig("Card");
@@ -50,6 +53,14 @@ export default function Contact() {
             textAlign="center"
           >
             <Box __css={styles}>
+              <Box textAlign="center">
+                <Icon
+                  as={FaLocationDot}
+                  width="30px"
+                  height="30px"
+                  color="inherit"
+                />
+              </Box>
               <Text textAlign="center">FIND ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
                 Truminds Software Systems
@@ -63,6 +74,14 @@ export default function Contact() {
             textAlign="center"
           >
             <Box __css={styles}>
+              <Box textAlign="center">
+                <Icon
+                  as={AiOutlineMail}
+                  width="30px"
+                  height="30px"
+                  color="inherit"
+                />
+              </Box>
               <Text textAlign="center">EMAIL ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
                 rahulkpatro@gmail.com
@@ -76,6 +95,14 @@ export default function Contact() {
             textAlign="center"
           >
             <Box __css={styles}>
+              <Box textAlign="center">
+                <Icon
+                  as={AiFillPhone}
+                  width="30px"
+                  height="30px"
+                  color="inherit"
+                />
+              </Box>
               <Text textAlign="center">CALL ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
                 (+91)-7667232335

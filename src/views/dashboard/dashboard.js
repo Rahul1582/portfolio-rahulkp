@@ -10,11 +10,17 @@ import {
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import dashboardimg from "../../assets/sidenavgif.gif";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 export default function Dashboard() {
+  const [quote, setQuote] = useState("");
   const styles = useStyleConfig("Card");
+
   let highlightTextColor = useColorModeValue("brand.400", "lightgreen.100");
   let textColor = useColorModeValue("gray.700", "white");
+
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
@@ -23,19 +29,18 @@ export default function Dashboard() {
     }
   };
 
-  // async function fetchRandomQuote() {
-  //   try {
-  //     setLoadingQuote(true);
-  //     setErrorMessage("");
-  //     setQuoteCopied(false);
-  //     const quoteObject = await axios.get("https://api.quotable.io/random");
-  //     setQuote(quoteObject.data);
-  //     setLoadingQuote(false);
-  //   } catch (error) {
-  //     setErrorMessage(error.message);
-  //     setLoadingQuote(false);
-  //   }
-  // }
+  useEffect(() => {
+    axios
+      .get("https://api.quotable.io/random")
+      .then((response) => {
+        let content = response.data.content;
+        setQuote(content);
+      })
+      .catch((error) => {
+        setQuote("");
+        console.error("Error fetching quote:", error);
+      });
+  }, []);
 
   return (
     <Box>
@@ -96,9 +101,12 @@ export default function Dashboard() {
           </Grid>
         </Flex>
 
-        <Flex direction="row" justifyContent="center" alignItems="center">
+        <Flex direction="column" justifyContent="center" alignItems="center">
           <Box __css={styles} border="none" textAlign="center">
             Random Quote
+            <Box fontSize="1.5em" color={highlightTextColor}>
+              {quote}
+            </Box>
           </Box>
         </Flex>
       </Box>
