@@ -44,13 +44,6 @@ const routes = [
     icon: <Icon as={MdBarChart} width="30px" height="30px" color="inherit" />,
     component: Resume
   },
-
-  // {
-  //   name: "Hobbies",
-  //   path: "/hobbies",
-  //   icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />
-  //   // component: Profile
-  // },
   {
     name: "Contact Me",
     path: "/contact",

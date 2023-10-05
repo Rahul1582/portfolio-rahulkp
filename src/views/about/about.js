@@ -247,10 +247,10 @@ export default function About() {
             </Box>
             <Text textAlign="center">Playing Drums</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              I use to play drums. I don't want people to think that I am a
-              great drummer because, to me, I'm just a kid playing drums, and I
-              love music. I am not a professional drummer but ya I can match
-              with the beats of the music!!
+              I play drums. I don't want people to think that I am a great
+              drummer because, to me, I'm just a kid playing drums, and I love
+              music. I am not a professional drummer but ya I can match with the
+              beats of the music!!
             </Text>
           </Box>
           <Box __css={styles}>

@@ -22,19 +22,28 @@ export default function Content(props) {
           <HStack
             spacing={activeRoute(route.path.toLowerCase()) ? "22px" : "26px"}
             py="14px"
+            border={
+              activeRoute(route.path.toLowerCase()) ? "3px solid" : "none"
+            }
           >
-            <Flex w="100%" alignItems="center" justifyContent="center">
+            <Flex
+              w="100%"
+              alignItems="center"
+              justifyContent="center"
+              textAlign="center"
+            >
               <Box
                 color={
                   activeRoute(route.path.toLowerCase()) ? activeIcon : textColor
                 }
                 me="18px"
+                textAlign="center"
               >
                 {route.icon}
               </Box>
               <Text
-                me="auto"
-                fontSize="20px"
+                fontSize="18px"
+                textAlign="center"
                 color={
                   activeRoute(route.path.toLowerCase())
                     ? activeColor
@@ -47,7 +56,7 @@ export default function Content(props) {
                 {route.name}
               </Text>
             </Flex>
-            <Box
+            {/* <Box
               h="36px"
               w="4px"
               bg={
@@ -56,7 +65,7 @@ export default function Content(props) {
                   : "transparent"
               }
               borderRadius="5px"
-            />
+            /> */}
           </HStack>
         </Box>
       </NavLink>
