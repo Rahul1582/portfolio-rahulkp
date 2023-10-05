@@ -1,18 +1,10 @@
-import {
-  Box,
-  Flex,
-  Image,
-  Stack,
-  Text,
-  useColorModeValue
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import Content from "./Content";
 import sidenav from "../../assets/dashboard.png";
 
 export default function Sidenav(props) {
   const { routes } = props;
-  let activeColor = useColorModeValue("gray.700", "#64CCC5");
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",

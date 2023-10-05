@@ -6,7 +6,6 @@ import {
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import { TypeAnimation } from "react-type-animation";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";

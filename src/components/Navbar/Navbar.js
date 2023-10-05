@@ -13,14 +13,14 @@ import bg from "../../assets/giphy (1).gif";
 export default function Navbar(props) {
   const { displayText } = props;
   const { colorMode, toggleColorMode } = useColorMode();
-  let mainText = useColorModeValue("navy.700", "lightgreen.100");
+  let mainText = useColorModeValue("brand.400", "lightgreen.100");
   let navbarPosition = "fixed";
   let navbarFilter = "none";
   let navbarBackdrop = "blur(10px)";
   let navbarShadow = "none";
   let navbarBg = useColorModeValue("rgba(244, 247, 254, 0.2)", "");
   let navbarBorder = "transparent";
-  let navbarBorderColor = useColorModeValue("brand.400", "white");
+  let navbarBorderColor = useColorModeValue("navy.700", "white");
   let secondaryMargin = "0px";
   let paddingX = "15px";
   let gap = "0px";

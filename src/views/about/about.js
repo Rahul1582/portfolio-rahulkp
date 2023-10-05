@@ -32,10 +32,7 @@ import GitHubCalendar from "react-github-calendar";
 export default function About() {
   const styles = useStyleConfig("Card");
   const { colorMode } = useColorMode();
-  const textColorPrimary = useColorModeValue(
-    "secondaryGray.900",
-    "lightgreen.100"
-  );
+  const textColorPrimary = useColorModeValue("brand.400", "lightgreen.100");
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
@@ -75,15 +72,31 @@ export default function About() {
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
-            <Box __css={styles} border="none" bg="transparent">
-              {" "}
+            <Box
+              position="relative"
+              w={{ base: "100%", "3xl": "100%" }}
+              h={{ base: "100%", "3xl": "250px" }}
+              borderRadius="20px"
+              p="20px"
+              overflow="hidden"
+            >
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                bg={textColorPrimary}
+                transform="rotate(5deg)"
+                zIndex="-1"
+              />
+
               <Image
                 src={myphoto}
-                w={{ base: "100%", "3xl": "100%" }}
-                h={{ base: "100%", "3xl": "250px" }}
-                borderRadius="20px"
-                __css={styles}
-                p="20px"
+                w="100%"
+                h="100%"
+                objectFit="cover"
+                textAlign="center"
               />
             </Box>
             <Flex
