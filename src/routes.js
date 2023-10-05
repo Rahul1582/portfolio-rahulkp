@@ -17,8 +17,8 @@ import Contact from "./views/contact/contact";
 
 const routes = [
   {
-    name: "Dashboard",
-    path: "/dashboard",
+    name: "Home",
+    path: "/home",
     navbarDisplayName: "<Home/>",
     icon: <Icon as={MdDashboard} width="30px" height="30px" color="inherit" />,
     component: Dashboard
