@@ -8,8 +8,12 @@ import {
   Image,
   Text,
   useColorModeValue,
-  useColorMode
+  useColorMode,
+  Icon
 } from "@chakra-ui/react";
+import { MdFlightTakeoff } from "react-icons/md";
+import { LiaDrumSolid } from "react-icons/lia";
+import { GiCricketBat } from "react-icons/gi";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
@@ -198,6 +202,73 @@ export default function About() {
             colorScheme={colorMode === "light" ? "light" : "dark"}
           />
         </Box>
+        <Flex
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          mb="40px"
+          mt="40px"
+        >
+          <Text color={textColorPrimary} fontSize="2em" textAlign="center">
+            {"<MY INTERESTS AND HOBBIES/>"}
+          </Text>
+        </Flex>
+        <SimpleGrid
+          columns={{ base: 1, xl: 3, "2xl": 3 }}
+          gap="20px"
+          mb="20px"
+          align={{ base: "center", xl: "center" }}
+          justify={{ base: "center", xl: "center" }}
+        >
+          <Box __css={styles}>
+            <Box textAlign="center">
+              <Icon
+                as={MdFlightTakeoff}
+                width="30px"
+                height="30px"
+                color="inherit"
+              />
+            </Box>
+            <Text textAlign="center">Travelling & Exploring</Text>
+            <Text color={textColorPrimary} textAlign="center" mt="5px">
+              I love travelling. My ultimate passion is to travel and explore
+              the world. I would love to leave my footprints across the globe
+              while I am working!!
+            </Text>
+          </Box>
+          <Box __css={styles}>
+            <Box textAlign="center">
+              <Icon
+                as={LiaDrumSolid}
+                width="30px"
+                height="30px"
+                color="inherit"
+              />
+            </Box>
+            <Text textAlign="center">Playing Drums</Text>
+            <Text color={textColorPrimary} textAlign="center" mt="5px">
+              I use to play drums. I don't want people to think that I am a
+              great drummer because, to me, I'm just a kid playing drums, and I
+              love music. I am not a professional drummer but ya I can match
+              with the beats of the music!!
+            </Text>
+          </Box>
+          <Box __css={styles}>
+            <Box textAlign="center">
+              <Icon
+                as={GiCricketBat}
+                width="30px"
+                height="30px"
+                color="inherit"
+              />
+            </Box>
+            <Text textAlign="center">Playing Outdoor Games</Text>
+            <Text color={textColorPrimary} textAlign="center" mt="5px">
+              My love for Sports changes with place and people I am with. All
+              time favourites include Badminton, Football and Cricket!!
+            </Text>
+          </Box>
+        </SimpleGrid>
       </Box>
     </Box>
   );

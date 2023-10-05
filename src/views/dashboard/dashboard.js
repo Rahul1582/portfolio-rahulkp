@@ -4,12 +4,12 @@ import {
   Box,
   Text,
   Grid,
-  useStyleConfig,
-  useColorModeValue
+  useColorModeValue,
+  useStyleConfig
 } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
-import check from "../../assets/sidenavgif.gif";
+import dashboardimg from "../../assets/sidenavgif.gif";
 
 export default function Dashboard() {
   const styles = useStyleConfig("Card");
@@ -22,6 +22,20 @@ export default function Dashboard() {
       }
     }
   };
+
+  // async function fetchRandomQuote() {
+  //   try {
+  //     setLoadingQuote(true);
+  //     setErrorMessage("");
+  //     setQuoteCopied(false);
+  //     const quoteObject = await axios.get("https://api.quotable.io/random");
+  //     setQuote(quoteObject.data);
+  //     setLoadingQuote(false);
+  //   } catch (error) {
+  //     setErrorMessage(error.message);
+  //     setLoadingQuote(false);
+  //   }
+  // }
 
   return (
     <Box>
@@ -78,8 +92,14 @@ export default function Dashboard() {
               </Text>
             </Box>
 
-            <img src={check} alt="dashboard" />
+            <img src={dashboardimg} alt="dashboard" />
           </Grid>
+        </Flex>
+
+        <Flex direction="row" justifyContent="center" alignItems="center">
+          <Box __css={styles} border="none" textAlign="center">
+            Random Quote
+          </Box>
         </Flex>
       </Box>
     </Box>

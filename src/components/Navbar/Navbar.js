@@ -8,7 +8,6 @@ import {
   useColorMode
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import bg from "../../assets/giphy (1).gif";
 
 export default function Navbar(props) {
   const { displayText } = props;
@@ -19,7 +18,7 @@ export default function Navbar(props) {
   let navbarBackdrop = "blur(10px)";
   let navbarShadow = "none";
   let navbarBg = useColorModeValue("rgba(244, 247, 254, 0.2)", "");
-  let navbarBorder = "transparent";
+  // let navbarBorder = "transparent";
   let navbarBorderColor = useColorModeValue("navy.700", "white");
   let secondaryMargin = "0px";
   let paddingX = "15px";
