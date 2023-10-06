@@ -11,9 +11,8 @@ export default function TechStackCard(props) {
       s
       transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
       _hover={{
-        transform: "scale(1.08)",
-        boxShadow: "lg",
-        cursor: "pointer"
+        base: "none",
+        xl: { transform: "scale(1.08)", boxShadow: "lg", cursor: "pointer" }
       }}
     >
       <Flex

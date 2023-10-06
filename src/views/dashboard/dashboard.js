@@ -46,7 +46,7 @@ export default function Dashboard() {
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt={{ base: "100px", md: "80px", xl: "40px" }}>
+      <Box pt={{ base: "100px", md: "80px", xl: "10px" }}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <Grid
             templateColumns={{
