@@ -53,7 +53,7 @@ export default function About() {
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
+      <Box pt={{ base: "40px", md: "80px", xl: "80px" }}>
         <Flex
           direction="row"
           justifyContent="center"

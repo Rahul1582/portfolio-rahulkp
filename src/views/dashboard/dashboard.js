@@ -13,6 +13,7 @@ import dashboardimg from "../../assets/sidenavgif.gif";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import Typewriter from "typewriter-effect";
 
 export default function Dashboard() {
   const [quote, setQuote] = useState("");
@@ -45,7 +46,7 @@ export default function Dashboard() {
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt={{ base: "130px", md: "80px", xl: "40px" }}>
+      <Box pt={{ base: "40px", md: "40px", xl: "40px" }}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <Grid
             templateColumns={{
@@ -105,7 +106,15 @@ export default function Dashboard() {
           <Box __css={styles} border="none" textAlign="center">
             Random Quote
             <Box fontSize="1.5em" color={highlightTextColor}>
-              {quote}
+              {quote ? (
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter.typeString(quote).start();
+                  }}
+                />
+              ) : (
+                <span>|</span>
+              )}
             </Box>
           </Box>
         </Flex>

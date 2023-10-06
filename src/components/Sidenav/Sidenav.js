@@ -15,7 +15,12 @@ export default function Sidenav(props) {
   let navbarBorderColor = useColorModeValue("brand.400", "#64CCC5");
 
   return (
-    <Box display={{ xl: "block" }} w="100%" position="fixed" minH="100%">
+    <Box
+      display={{ sm: "none", xl: "block" }}
+      w="100%"
+      position="fixed"
+      minH="100%"
+    >
       <Box
         bg={sidenavBg}
         transition={variantChange}
