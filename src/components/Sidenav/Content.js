@@ -28,8 +28,9 @@ export default function Content(props) {
             <Flex
               w="100%"
               alignItems="center"
-              justifyContent="center"
+              justifyContent="start"
               textAlign="center"
+              ps="20px"
             >
               <Box
                 color={
