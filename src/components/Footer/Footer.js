@@ -39,6 +39,10 @@ export default function Footer() {
           xl: "start"
         }}
         display="flex"
+        fontSize={{
+          base: "12px",
+          xl: "20px"
+        }}
         mb={{ base: "20px", xl: "0px" }}
       >
         {" "}

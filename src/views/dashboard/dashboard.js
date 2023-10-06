@@ -46,7 +46,7 @@ export default function Dashboard() {
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt={{ base: "40px", md: "80px", xl: "40px" }}>
+      <Box pt={{ base: "100px", md: "80px", xl: "40px" }}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <Grid
             templateColumns={{
@@ -103,11 +103,12 @@ export default function Dashboard() {
         </Flex>
 
         <Flex direction="column" justifyContent="center" alignItems="center">
-          <Box __css={styles} border="none" textAlign="center">
+          <Box __css={styles} border="none" textAlign="center" cursor="default">
             Random Quote
             <Box
               fontSize={{ sm: "1em", md: "1.5em", xl: "1.5em" }}
               color={highlightTextColor}
+              cursor="default"
             >
               {quote ? (
                 <Typewriter

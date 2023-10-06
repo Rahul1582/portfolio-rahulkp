@@ -29,8 +29,7 @@ export default function ProjectCard(props) {
       _hover={{
         transform: "scale(1.03)",
         boxShadow: "md",
-        border: "1px solid",
-        cursor: "pointer"
+        border: "1px solid"
       }}
     >
       <Flex direction={{ base: "column" }} justify="center">
@@ -60,6 +59,7 @@ export default function ProjectCard(props) {
               mb="5px"
               me="14px"
               textAlign="center"
+              cursor="default"
             >
               {projectName}
             </Text>

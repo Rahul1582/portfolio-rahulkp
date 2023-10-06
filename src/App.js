@@ -34,7 +34,7 @@ export default function App() {
           mx="auto"
           p={{ base: "20px", md: "30px" }}
           pe="20px"
-          minH="90vh"
+          minH={{ base: "85vh", xl: "90vh" }}
           pt="50px"
         >
           <Routes>

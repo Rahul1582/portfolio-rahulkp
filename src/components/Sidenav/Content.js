@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, HStack, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 import { NavLink, useLocation } from "react-router-dom";
 
 export default function Content(props) {
@@ -9,7 +9,6 @@ export default function Content(props) {
 
   let activeIcon = useColorModeValue("gray.700", "white");
   let textColor = useColorModeValue("lightblue.100", "lightgreen.100");
-  // let brandColor = useColorModeValue("gray.700", "white");
 
   const activeRoute = (routeName) => {
     return currentlocation.pathname.includes(routeName);
@@ -41,20 +40,22 @@ export default function Content(props) {
               >
                 {route.icon}
               </Box>
-              <Text
+              <Box
                 fontSize="18px"
                 textAlign="center"
+                cursor="pointer"
                 color={
                   activeRoute(route.path.toLowerCase())
                     ? activeColor
                     : textColor
                 }
+
                 //   fontWeight={
                 //   activeRoute(route.path.toLowerCase()) ? "bold" : "normal"
                 // }
               >
                 {route.name}
-              </Text>
+              </Box>
             </Flex>
             {/* <Box
               h="36px"

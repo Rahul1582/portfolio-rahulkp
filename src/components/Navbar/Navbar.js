@@ -30,7 +30,6 @@ export default function Navbar(props) {
       position={navbarPosition}
       boxShadow={navbarShadow}
       bg={navbarBg}
-      // borderColor={navbarBorder}
       filter={navbarFilter}
       backdropFilter={navbarBackdrop}
       backgroundPosition="center"

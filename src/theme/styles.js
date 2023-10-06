@@ -57,6 +57,11 @@ export const globalStyles = {
       },
       html: {
         fontFamily: "Lilita One"
+      },
+      ".chakra-text": {
+        "&:hover": {
+          cursor: "default"
+        }
       }
     })
   }
