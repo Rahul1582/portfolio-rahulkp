@@ -63,7 +63,7 @@ export default function Dashboard() {
               pt={{ xl: "100px" }}
               pl="10px"
               textAlign="center"
-              fontSize={{ base: "2em", xl: "3em" }}
+              fontSize={{ sm: "1.5em", md: "2em", xl: "3em" }}
             >
               <Text
                 fontFamily="Lobster Two"
@@ -105,7 +105,10 @@ export default function Dashboard() {
         <Flex direction="column" justifyContent="center" alignItems="center">
           <Box __css={styles} border="none" textAlign="center">
             Random Quote
-            <Box fontSize="1.5em" color={highlightTextColor}>
+            <Box
+              fontSize={{ sm: "1em", md: "1.5em", xl: "1.5em" }}
+              color={highlightTextColor}
+            >
               {quote ? (
                 <Typewriter
                   onInit={(typewriter) => {
