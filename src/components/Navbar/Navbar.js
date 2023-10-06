@@ -8,6 +8,8 @@ import {
   useColorMode
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import routes from "../../routes.js";
+import { SideNavResponsive } from "../Sidenav/Sidenav.js";
 
 export default function Navbar(props) {
   const { displayText } = props;
@@ -58,7 +60,7 @@ export default function Navbar(props) {
         xl: "calc(100vw - 350px)",
         "2xl": "calc(100vw - 365px)"
       }}
-      zIndex="99999"
+      zIndex="99"
     >
       <Flex
         w="100%"
@@ -96,6 +98,7 @@ export default function Navbar(props) {
           </Link>
         </Box>
         <Box>
+          <SideNavResponsive routes={routes} />
           <IconButton
             aria-label="Toggle dark mode"
             icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}

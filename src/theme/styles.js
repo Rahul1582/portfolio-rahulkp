@@ -23,23 +23,6 @@ export const globalStyles = {
       800: "#707EAE",
       900: "#1B2559"
     },
-    red: {
-      100: "#FEEFEE",
-      500: "#EE5D50",
-      600: "#E31A1A"
-    },
-    blue: {
-      50: "#EFF4FB",
-      500: "#3965FF"
-    },
-    orange: {
-      100: "#FFF6DA",
-      500: "#FFB547"
-    },
-    green: {
-      100: "#E6FAF5",
-      500: "#01B574"
-    },
     navy: {
       50: "#d0dcfb",
       100: "#aac0fe",
@@ -72,7 +55,6 @@ export const globalStyles = {
         bg: mode("secondaryGray.300", "navyBlue.400")(props),
         fontFamily: "Lilita One",
         fontWeight: "200"
-        // letterSpacing: "-0.5px"
       },
       input: {
         color: "gray.700"
