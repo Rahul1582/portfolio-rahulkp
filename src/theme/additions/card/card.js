@@ -11,7 +11,7 @@ const Card = {
     wordWrap: "break-word",
     bg: mode("#ffffff", "navyBlue.300")(props),
     border: "2px solid",
-    borderColor: mode("brand.400", "lightgreen.100")(props),
+    borderColor: mode("lightblue.100", "lightgreen.100")(props),
     backgroundClip: "border-box"
   })
 };

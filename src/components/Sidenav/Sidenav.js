@@ -26,7 +26,7 @@ export default function Sidenav(props) {
   );
   // Chakra Color Mode
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
-  let navbarBorderColor = useColorModeValue("brand.400", "lightgreen.100");
+  let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
 
   return (
     <Box
@@ -70,7 +70,7 @@ export default function Sidenav(props) {
 
 export function SideNavResponsive(props) {
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
-  let navbarBorderColor = useColorModeValue("brand.400", "lightgreen.100");
+  let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",

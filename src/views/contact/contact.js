@@ -18,7 +18,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Contact() {
   const styles = useStyleConfig("Card");
-  const textColorPrimary = useColorModeValue("brand.400", "lightgreen.100");
+  const textColorPrimary = useColorModeValue("lightblue.100", "lightgreen.100");
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {

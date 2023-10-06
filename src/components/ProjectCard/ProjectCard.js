@@ -66,7 +66,7 @@ export default function ProjectCard(props) {
           </Flex>
           <Flex direction="row" align="center" justify="Center">
             <Text
-              color="secondaryGray.600"
+              color="secondaryGray.500"
               fontSize={{
                 base: "sm"
               }}

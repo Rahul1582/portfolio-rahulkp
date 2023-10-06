@@ -14,13 +14,12 @@ import { SideNavResponsive } from "../Sidenav/Sidenav.js";
 export default function Navbar(props) {
   const { displayText } = props;
   const { colorMode, toggleColorMode } = useColorMode();
-  let mainText = useColorModeValue("brand.400", "lightgreen.100");
+  let mainText = useColorModeValue("lightblue.100", "lightgreen.100");
   let navbarPosition = "fixed";
   let navbarFilter = "none";
   let navbarBackdrop = "blur(10px)";
   let navbarShadow = "none";
   let navbarBg = useColorModeValue("rgba(244, 247, 254, 0.2)", "");
-  // let navbarBorder = "transparent";
   let navbarBorderColor = useColorModeValue("navy.700", "white");
   let secondaryMargin = "0px";
   let paddingX = "15px";
@@ -66,7 +65,7 @@ export default function Navbar(props) {
         w="100%"
         flexDirection="row"
         justifyContent="space-between"
-        alignItems={{ xl: "center" }}
+        alignItems="center"
         mb={gap}
         pt="20px"
         ps={{
@@ -98,12 +97,14 @@ export default function Navbar(props) {
           </Link>
         </Box>
         <Box>
-          <SideNavResponsive routes={routes} />
-          <IconButton
-            aria-label="Toggle dark mode"
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            onClick={toggleColorMode}
-          />
+          <Flex direction="row" alignItems="center" justifyContent="center">
+            <SideNavResponsive routes={routes} />
+            <IconButton
+              aria-label="Toggle dark mode"
+              icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              onClick={toggleColorMode}
+            />
+          </Flex>
         </Box>
       </Flex>
     </Box>
