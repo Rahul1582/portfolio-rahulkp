@@ -5,12 +5,13 @@ import {
   SimpleGrid,
   Grid,
   useStyleConfig,
-  Image,
   Text,
   useColorModeValue,
   useColorMode,
   Icon
 } from "@chakra-ui/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { MdFlightTakeoff } from "react-icons/md";
 import { LiaDrumSolid } from "react-icons/lia";
 import { GiCricketBat } from "react-icons/gi";
@@ -94,13 +95,21 @@ export default function About() {
                 transform="rotate(5deg)"
                 zIndex="-1"
               />
-
+              {/* 
               <Image
                 src={myphoto}
                 w="100%"
                 h="100%"
                 objectFit="cover"
                 textAlign="center"
+                loading="lazy"
+              /> */}
+              <LazyLoadImage
+                src={myphoto}
+                width="100%"
+                height="100%"
+                alt="Image Alt"
+                effect="blur"
               />
             </Box>
             <Flex

@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   useStyleConfig
 } from "@chakra-ui/react";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import dashboardimg from "../../assets/sidenavgif.gif";
@@ -14,6 +15,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import Typewriter from "typewriter-effect";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Dashboard() {
   const [quote, setQuote] = useState("");
@@ -98,7 +100,7 @@ export default function Dashboard() {
               </Text>
             </Box>
 
-            <img src={dashboardimg} alt="dashboard" />
+            <LazyLoadImage src={dashboardimg} alt="dashboard" effect="blur" />
           </Grid>
         </Flex>
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
 import { Box, useStyleConfig, Flex } from "@chakra-ui/react";
@@ -38,6 +37,7 @@ export default function Resume() {
               width="100%"
               height="100%"
               style={{ border: "5px solid" }}
+              loading="lazy"
             ></iframe>
           </Box>
         </Flex>

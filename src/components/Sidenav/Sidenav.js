@@ -7,7 +7,6 @@ import {
   DrawerOverlay,
   Flex,
   Icon,
-  Image,
   Stack,
   useColorModeValue,
   useDisclosure
@@ -16,6 +15,8 @@ import React from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import Content from "./Content";
 import sidenav from "../../assets/dashboard.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Sidenav(props) {
   const { routes } = props;
@@ -54,7 +55,7 @@ export default function Sidenav(props) {
           borderRadius="30px"
         >
           <Flex align="center" direction="column" fontSize="20px">
-            <Image src={sidenav}></Image>
+            <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
           </Flex>
 
           <Stack direction="column" mb="50px" mt="20px">
@@ -132,7 +133,7 @@ export function SideNavResponsive(props) {
                 borderRadius="30px"
               >
                 <Flex align="center" direction="column" fontSize="20px">
-                  <Image src={sidenav}></Image>
+                  <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
                 </Flex>
 
                 <Stack direction="column" mb="50px" mt="20px">

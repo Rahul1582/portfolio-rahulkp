@@ -2,13 +2,14 @@ import React from "react";
 import {
   Box,
   Flex,
-  Image,
   Button,
   Link,
   useColorModeValue,
   useStyleConfig,
   Text
 } from "@chakra-ui/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function ProjectCard(props) {
   const {
@@ -33,12 +34,13 @@ export default function ProjectCard(props) {
     >
       <Flex direction={{ base: "column" }} justify="center">
         <Box mb={{ base: "10px", "2xl": "10px" }} position="relative">
-          <Image
+          <LazyLoadImage
             src={projectImage}
             w={{ base: "100%", "3xl": "100%" }}
             h={{ base: "100%", "3xl": "250px" }}
             borderRadius="10px"
             p="20px"
+            effect="blur"
             // border="2px solid"
             // borderColor={textColor}
           />
