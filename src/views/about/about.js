@@ -231,9 +231,15 @@ export default function About() {
             </Box>
             <Text textAlign="center">Travelling & Exploring</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              I love travelling. My ultimate passion is to travel and explore
-              the world. I would love to leave my footprints across the globe
-              while I am working!!
+              I am passionate about traveling and exploring new places. Whether
+              it's uncovering hidden gems in my own backyard or embarking on
+              exciting adventures, I thrive on the thrill of discovering new
+              cultures, cuisines, and landscapes. Traveling not only broadens my
+              horizons but also provides me with valuable life experiences and a
+              deep appreciation for the diversity of our world. It fuels my
+              curiosity, inspires my creativity, and allows me to connect with
+              people from different walks of life. I believe that every journey
+              is an opportunity for personal growth and self-discovery!!
             </Text>
           </Box>
           <Box __css={styles}>
@@ -247,10 +253,15 @@ export default function About() {
             </Box>
             <Text textAlign="center">Playing Drums</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              I play drums. I don't want people to think that I am a great
-              drummer because, to me, I'm just a kid playing drums, and I love
-              music. I am not a professional drummer but ya I can match with the
-              beats of the music!!
+              I have a deep passion for playing the drums, which has been a
+              cherished hobby of mine for many years. The rhythmic beats and the
+              feeling of being in sync with the music provide me with a sense of
+              joy and creative expression that is truly unparalleled. Whether
+              it's jamming with friends, exploring new techniques, or simply
+              drumming to my favorite tunes, I find immense fulfillment and
+              relaxation in this musical pursuit. My love for drumming not only
+              serves as a source of personal joy but also reflects my dedication
+              to honing my skills and maintaining a well-rounded lifestyle!!
             </Text>
           </Box>
           <Box __css={styles}>
@@ -264,8 +275,13 @@ export default function About() {
             </Box>
             <Text textAlign="center">Playing Outdoor Games</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              My love for Sports changes with place and people I am with. All
-              time favourites include Badminton, Football and Cricket!!
+              Whether it's a competitive game of soccer, a relaxing round of
+              golf, or simply throwing a frisbee in the park, I find immense joy
+              and fulfillment in the great outdoors. Playing sports not only
+              keeps me physically active but also fosters teamwork, leadership,
+              and a strong sense of camaraderie. It's a wonderful way for me to
+              unwind, stay fit, and connect with friends and family while
+              enjoying the beauty of nature!!
             </Text>
           </Box>
         </SimpleGrid>

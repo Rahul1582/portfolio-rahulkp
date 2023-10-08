@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import routes from "./routes.js";
 import { Box } from "@chakra-ui/react";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Suspense } from "react";
 
 export default function App() {
   const redirectRoute = (routes) => {
@@ -39,7 +40,7 @@ export default function App() {
         >
           <Routes>
             {redirectRoute(routes)}
-            <Route path="*" element={<Navigate to="/dashboard" replace />} />
+            <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </Box>
         <Box>
