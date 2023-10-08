@@ -72,7 +72,6 @@ export default function About() {
               lg: "1.34fr 1.62fr"
             }}
             templateRows={{
-              base: "repeat(2, 1fr)",
               lg: "1fr"
             }}
             gap={{ base: "20px", xl: "20px" }}
@@ -95,21 +94,13 @@ export default function About() {
                 transform="rotate(5deg)"
                 zIndex="-1"
               />
-              {/* 
-              <Image
-                src={myphoto}
-                w="100%"
-                h="100%"
-                objectFit="cover"
-                textAlign="center"
-                loading="lazy"
-              /> */}
               <LazyLoadImage
                 src={myphoto}
                 width="100%"
                 height="100%"
                 alt="Image Alt"
                 effect="blur"
+                style={{ height: "100%" }}
               />
             </Box>
             <Flex
