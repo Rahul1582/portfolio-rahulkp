@@ -30,7 +30,6 @@ export default function Footer() {
       px={{ base: "30px", md: "40px" }}
       pb="30px"
       mt="20px"
-      fontSize="20px"
     >
       <Text
         color={textColor}
@@ -40,7 +39,8 @@ export default function Footer() {
         }}
         display="flex"
         fontSize={{
-          base: "12px",
+          base: "10px",
+          md: "15px",
           xl: "20px"
         }}
         mb={{ base: "20px", xl: "0px" }}
