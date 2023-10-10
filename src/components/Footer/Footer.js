@@ -38,6 +38,8 @@ export default function Footer() {
           xl: "start"
         }}
         display="flex"
+        justifyContent="center"
+        alignItems="center"
         fontSize={{
           base: "10px",
           md: "15px",

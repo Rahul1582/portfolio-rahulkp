@@ -26,7 +26,7 @@ export default function Sidenav(props) {
     "unset"
   );
   // Chakra Color Mode
-  let sidenavBg = useColorModeValue("white", "navyBlue.300");
+  let sidenavBg = useColorModeValue("secondaryGray.400", "navyBlue.300");
   let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
 
   return (

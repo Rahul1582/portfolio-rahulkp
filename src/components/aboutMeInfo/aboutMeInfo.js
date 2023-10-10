@@ -5,7 +5,7 @@ export default function AboutMeInfo(props) {
   const { title, value } = props;
   const textColorPrimary = useColorModeValue("lightblue.100", "lightgreen.100");
   const textColorSecondary = useColorModeValue("secondaryGray.900", "gray.400");
-  const bg = useColorModeValue("white", "navyBlue.300");
+  const bg = useColorModeValue("secondaryGray.400", "navyBlue.300");
   const styles = useStyleConfig("Card");
   return (
     <Box __css={styles} bg={bg} paddingLeft="5px" paddingRight="5px">
