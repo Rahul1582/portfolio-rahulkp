@@ -120,7 +120,7 @@ export default function About() {
                 <SimpleGrid columns="2" gap="20px">
                   <AboutMeInfo
                     boxShadow={cardShadow}
-                    title="Current Organisation"
+                    title="Current Organization"
                     value="Truminds Software Systems"
                   />
                   <AboutMeInfo

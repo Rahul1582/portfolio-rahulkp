@@ -23,11 +23,11 @@ export default function Sidenav(props) {
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
-    "unset"
+    "14px 17px 40px 4px rgba(112, 144, 176, 0.08)"
   );
   // Chakra Color Mode
-  let sidenavBg = useColorModeValue("secondaryGray.400", "navyBlue.300");
-  let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
+  // let sidenavBg = useColorModeValue("secondaryGray.400", "navyBlue.300");
+  // let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
 
   return (
     <Box
@@ -37,15 +37,13 @@ export default function Sidenav(props) {
       minH="100%"
     >
       <Box
-        bg={sidenavBg}
+        // bg={sidenavBg}
         transition={variantChange}
         w="300px"
         h="100vh"
         minH="100%"
         overflowX="hidden"
         boxShadow={shadow}
-        borderRight="2px solid"
-        borderColor={navbarBorderColor}
       >
         <Flex
           direction="column"
@@ -75,7 +73,7 @@ export function SideNavResponsive(props) {
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
-    "unset"
+    "14px 17px 40px 4px rgba(112, 144, 176, 0.08)"
   );
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -121,8 +119,6 @@ export function SideNavResponsive(props) {
               minH="100%"
               overflowX="hidden"
               boxShadow={shadow}
-              borderRight="2px solid"
-              borderColor={navbarBorderColor}
               zIndex="9999"
             >
               <Flex
