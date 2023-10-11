@@ -14,7 +14,7 @@ import {
 import React from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import Content from "./Content";
-import sidenav from "../../assets/dashboard.png";
+import sidenav from "../../assets/sidenav.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 

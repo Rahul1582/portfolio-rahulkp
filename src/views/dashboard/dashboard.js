@@ -10,7 +10,7 @@ import {
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
-import dashboardimg from "../../assets/sidenavgif.gif";
+import dashboardimg from "../../assets/dashboardgif.gif";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
