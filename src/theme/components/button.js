@@ -17,15 +17,15 @@ export const buttonStyles = {
       variants: {
         darkBrand: (props) => ({
           bg: mode("lightblue.100", "lightgreen.100")(props),
-          color: "white",
+          color: mode("white", "black")(props),
           _focus: {
             bg: mode("lightgreen.100", "lightblue.100")(props)
           },
           _active: {
-            bg: mode("other.900", "lightblue.100")(props)
+            bg: mode("lightgreen.100", "lightblue.100")(props)
           },
           _hover: {
-            bg: mode("other.800", "lightblue.100")(props)
+            bg: mode("lightgreen.100", "lightblue.100")(props)
           }
         })
       }

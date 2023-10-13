@@ -122,7 +122,6 @@ export default function ProjectCard(props) {
                 >
                   <Button
                     variant="darkBrand"
-                    color="white"
                     fontSize="sm"
                     fontFamily="DM Sans"
                     borderRadius="70px"
@@ -149,7 +148,6 @@ export default function ProjectCard(props) {
             >
               <Button
                 variant="darkBrand"
-                color="white"
                 fontSize="sm"
                 fontFamily="DM Sans"
                 borderRadius="70px"

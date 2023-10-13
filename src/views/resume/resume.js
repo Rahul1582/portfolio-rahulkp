@@ -1,7 +1,7 @@
 import React from "react";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
-import { Box, useStyleConfig, Flex } from "@chakra-ui/react";
+import { Box, useStyleConfig, Flex, Button } from "@chakra-ui/react";
 
 export default function Resume() {
   const styles = useStyleConfig("Card");
@@ -12,17 +12,16 @@ export default function Resume() {
       }
     }
   };
+
+  const handleDownload = () => {
+    window.location.href =
+      "https://drive.google.com/uc?export=download&id=143ZCD6FQKXtLn6H42kBR1p6geZjsU6fQ";
+  };
+
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt="20px">
-        <Flex
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-          mt="40px"
-          mb="20px"
-        ></Flex>
+      <Box pt={{ base: "40px", md: "80px", xl: "80px" }}>
         <Flex justifyContent="center" alignItems="center">
           <Box
             __css={styles}
@@ -40,6 +39,16 @@ export default function Resume() {
               loading="lazy"
             ></iframe>
           </Box>
+        </Flex>
+        <Flex justifyContent="center" alignItems="center" mt="20px">
+          <Button
+            onClick={handleDownload}
+            variant="darkBrand"
+            fontSize="sm"
+            fontFamily="DM Sans"
+          >
+            Download Resume
+          </Button>
         </Flex>
       </Box>
     </Box>
