@@ -91,7 +91,7 @@ export default function About() {
                 width="100%"
                 height="100%"
                 bg={textColorPrimary}
-                transform="rotate(5deg)"
+                transform="rotate(10deg)"
                 zIndex="-1"
               />
               <LazyLoadImage
@@ -200,6 +200,8 @@ export default function About() {
           <GitHubCalendar
             username="rahul1582"
             colorScheme={colorMode === "light" ? "light" : "dark"}
+            year="last"
+            showWeekdayLabels="true"
           />
         </Box>
         <Flex
@@ -236,10 +238,7 @@ export default function About() {
               exciting adventures, I thrive on the thrill of discovering new
               cultures, cuisines, and landscapes. Traveling not only broadens my
               horizons but also provides me with valuable life experiences and a
-              deep appreciation for the diversity of our world. It fuels my
-              curiosity, inspires my creativity, and allows me to connect with
-              people from different walks of life. I believe that every journey
-              is an opportunity for personal growth and self-discovery!!
+              deep appreciation for the diversity of our world!!
             </Text>
           </Box>
           <Box __css={styles}>
@@ -259,9 +258,7 @@ export default function About() {
               joy and creative expression that is truly unparalleled. Whether
               it's jamming with friends, exploring new techniques, or simply
               drumming to my favorite tunes, I find immense fulfillment and
-              relaxation in this musical pursuit. My love for drumming not only
-              serves as a source of personal joy but also reflects my dedication
-              to honing my skills and maintaining a well-rounded lifestyle!!
+              relaxation in this musical pursuit!!
             </Text>
           </Box>
           <Box __css={styles}>
