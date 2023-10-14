@@ -8,7 +8,9 @@ import {
   Text,
   useColorModeValue,
   useColorMode,
-  Icon
+  Icon,
+  Button,
+  Link
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -204,6 +206,13 @@ export default function About() {
             showWeekdayLabels="true"
           />
         </Box>
+        <Flex justifyContent="center" alignItems="center" mt="20px">
+          <Link href="https://github.com/Rahul1582" target="blank">
+            <Button variant="darkBrand" fontSize="sm" fontFamily="DM Sans">
+              Visit Github
+            </Button>
+          </Link>
+        </Flex>
         <Flex
           direction="row"
           justifyContent="center"
