@@ -92,7 +92,7 @@ export default function Navbar(props) {
             borderBottom="2px solid"
             borderColor={navbarBorderColor}
           >
-            {displayText}
+            {displayText} 👇🏻
           </Link>
         </Box>
         <Box>

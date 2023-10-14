@@ -72,7 +72,7 @@ export default function Dashboard() {
                 fontWeight="bold"
                 color={textColor}
               >
-                Hello Everyone!!🙋‍♂️
+                Hello Everyone!!🙋🏻‍♂️
               </Text>
 
               <Text
