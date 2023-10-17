@@ -6,11 +6,13 @@ import { globalStyles } from "./styles";
 
 export default extendTheme(
   {
-    initialColorMode: "dark",
-    useSystemColorMode: false
+    config: {
+      initialColorMode: "dark",
+      useSystemColorMode: false
+    }
   },
-  { breakpoints }, // Breakpoints
+  { breakpoints },
   globalStyles,
-  buttonStyles, // button styles
-  CardComponent // card component
+  buttonStyles,
+  CardComponent
 );
