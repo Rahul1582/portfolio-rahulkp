@@ -3,7 +3,12 @@ import Sidenav from "./components/Sidenav/Sidenav";
 import Footer from "./components/Footer/Footer";
 import routes from "./routes.js";
 import { Box, useColorMode } from "@chakra-ui/react";
-import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
 
 export default function App() {
   const { colorMode } = useColorMode();
@@ -36,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <HashRouter>
+    <Router>
       <Sidenav routes={routes} />
       <StarryBackground />
       <Box
@@ -68,6 +73,6 @@ export default function App() {
           <Footer />
         </Box>
       </Box>
-    </HashRouter>
+    </Router>
   );
 }
