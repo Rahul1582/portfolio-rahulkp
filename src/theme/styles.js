@@ -31,11 +31,11 @@ export const globalStyles = {
     navyBlue: {
       100: "#192734",
       200: "#152f47",
-      300: "#053B50",
-      400: "#0e3645"
+      300: "#272445",
+      400: "#1F1D36"
     },
     lightgreen: {
-      100: "#64CCC5"
+      100: "#E9A6A6"
     },
     lightblue: {
       100: "#0284c7"

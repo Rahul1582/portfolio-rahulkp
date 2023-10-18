@@ -22,7 +22,7 @@ option {
 
 .star-white {
   position: absolute;
-  background: #64ccc5;
+  background: #e9a6a6;
   width: 3px;
   height: 3px;
   animation: blink 3s linear infinite, move 20s linear infinite;

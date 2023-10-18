@@ -4,7 +4,7 @@ import { Box, useColorModeValue, useStyleConfig, Text } from "@chakra-ui/react";
 export default function AboutMeInfo(props) {
   const { title, value } = props;
   const textColorPrimary = useColorModeValue("lightblue.100", "lightgreen.100");
-  const textColorSecondary = useColorModeValue("secondaryGray.900", "gray.400");
+  const textColorSecondary = useColorModeValue("secondaryGray.900", "white");
   const bg = useColorModeValue("secondaryGray.400", "navyBlue.300");
   const styles = useStyleConfig("Card");
   return (
@@ -16,7 +16,7 @@ export default function AboutMeInfo(props) {
         flexDirection="column"
         gap="5px"
       >
-        <Text color={textColorSecondary} fontSize="16px" textAlign="center">
+        <Text color={textColorSecondary} fontSize="15px" textAlign="center">
           {title}
         </Text>
         <Text color={textColorPrimary} fontSize="16px" textAlign="center">
