@@ -27,6 +27,7 @@ option {
   height: 3px;
   animation: blink 3s linear infinite, move 20s linear infinite;
   z-index: 9999;
+  border-radius: 50%;
 }
 
 .star-black {
@@ -36,6 +37,7 @@ option {
   height: 3px;
   animation: blink 3s linear infinite, move 20s linear infinite;
   z-index: 9999;
+  border-radius: 50%;
 }
 
 @keyframes blink {
