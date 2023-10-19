@@ -9,8 +9,8 @@
 
 <div display="flex"> 
   <kbd>
- <img src="./images/mobile-view-1.jpg" width="50%" height="50%">
- <img src="./images/mobile-view-2.jpg" width="50%" height = "50%">
+ <img src="./images/mobile-view-1.jpg" width="540" height="500">
+ <img src="./images/mobile-view-2.jpg" width="535" height="500">
   </kbd>
 </div>
 
@@ -40,7 +40,6 @@
 
 - [React.js](https://react.dev/)
 - [Chakra UI](https://chakra-ui.com/)
-- [React Bootstrap](https://react-bootstrap.github.io/)
 
 ## Getting Started ⚡ :-
 
@@ -56,7 +55,7 @@
  npm install
 ```
 
-**3. Now start the React serverV by running the following command :-**
+**3. Now start the React server by running the following command :-**
 
 ```bash
  npm start
