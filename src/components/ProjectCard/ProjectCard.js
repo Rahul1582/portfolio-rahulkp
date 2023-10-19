@@ -25,7 +25,6 @@ export default function ProjectCard(props) {
   return (
     <Box
       __css={styles}
-      bg="none"
       h={{ base: "100%" }}
       transition="transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out"
       _hover={{

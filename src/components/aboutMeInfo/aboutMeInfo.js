@@ -8,7 +8,13 @@ export default function AboutMeInfo(props) {
   const bg = useColorModeValue("secondaryGray.400", "navyBlue.300");
   const styles = useStyleConfig("Card");
   return (
-    <Box __css={styles} bg={bg} paddingLeft="5px" paddingRight="5px">
+    <Box
+      __css={styles}
+      bg={bg}
+      paddingLeft="5px"
+      paddingRight="5px"
+      border="none"
+    >
       <Box
         display="flex"
         justifyContent="center"

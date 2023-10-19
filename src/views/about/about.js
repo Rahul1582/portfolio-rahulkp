@@ -207,21 +207,19 @@ export default function About() {
           />
         </Box>
         <Flex justifyContent="center" alignItems="center" mt="20px">
-          <Link href="https://git.io/streak-stats">
-            {colorMode === "light" ? (
-              <LazyLoadImage
-                src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-light&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
-                alt="GitHub Streak"
-                effect="blur"
-              />
-            ) : (
-              <LazyLoadImage
-                src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-dark&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
-                alt="GitHub Streak"
-                effect="blur"
-              />
-            )}
-          </Link>
+          {colorMode === "light" ? (
+            <LazyLoadImage
+              src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-light&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
+              alt="GitHub Streak"
+              effect="blur"
+            />
+          ) : (
+            <LazyLoadImage
+              src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=calm-pink&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
+              alt="GitHub Streak"
+              effect="blur"
+            />
+          )}
         </Flex>
         <Flex justifyContent="center" alignItems="center" mt="20px">
           <Link href="https://github.com/Rahul1582" target="blank">

@@ -48,7 +48,7 @@ export default function Dashboard() {
   return (
     <Box>
       <Navbar displayText={getActiveRoute(routes)} />
-      <Box pt={{ base: "80px", md: "80px", xl: "20px" }}>
+      <Box pt={{ base: "80px", md: "80px", xl: "10px" }}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <Grid
             templateColumns={{
@@ -67,37 +67,39 @@ export default function Dashboard() {
               textAlign="center"
               fontSize={{ sm: "1.5em", md: "2em", xl: "3em" }}
             >
-              <Text
-                fontFamily="Lobster Two"
-                fontWeight="bold"
-                color={textColor}
-              >
-                Hello Everyone!!🙋🏻‍♂️
-              </Text>
-
-              <Text
-                fontFamily="Lobster Two"
-                fontWeight="bold"
-                color={textColor}
-                mt="20px"
-              >
-                This is{" "}
-                <Text display="inline-flex" color={highlightTextColor}>
-                  Rahul Kumar Patro
+              <Box __css={styles} border="none">
+                <Text
+                  fontFamily="Lobster Two"
+                  fontWeight="bold"
+                  color={textColor}
+                >
+                  Hello Everyone!!🙋🏻‍♂️
                 </Text>
-              </Text>
 
-              <Text
-                fontFamily="Lobster Two"
-                fontWeight="bold"
-                color={textColor}
-                mt="20px"
-              >
-                I am a{" "}
-                <Text display="inline-flex" color={highlightTextColor}>
-                  Software Developer
+                <Text
+                  fontFamily="Lobster Two"
+                  fontWeight="bold"
+                  color={textColor}
+                  mt="20px"
+                >
+                  This is{" "}
+                  <Text display="inline-flex" color={highlightTextColor}>
+                    Rahul Kumar Patro
+                  </Text>
                 </Text>
-              </Text>
+
+                <Text
+                  fontFamily="Lobster Two"
+                  fontWeight="bold"
+                  color={textColor}
+                  mt="20px"
+                >
+                  I am a{" "}
+                  <Text display="inline-flex" color={highlightTextColor}>
+                    Software Developer
+                  </Text>
+                </Text>
+              </Box>
             </Box>
 
             <LazyLoadImage src={dashboardimg} alt="dashboard" effect="blur" />
