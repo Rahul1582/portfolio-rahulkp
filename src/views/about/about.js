@@ -181,7 +181,7 @@ export default function About() {
           <TechStackCard imagepath={cpp} />
           <TechStackCard imagepath={node} />
           <TechStackCard imagepath={mongo} />
-          <TechStackCard imagepath={express} />
+          <TechStackCard imagepath={express} background="white" />
           <TechStackCard imagepath={git} />
           <TechStackCard imagepath={gitlab} />
           <TechStackCard imagepath={html} />

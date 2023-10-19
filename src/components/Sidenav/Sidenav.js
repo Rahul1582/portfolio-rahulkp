@@ -8,6 +8,7 @@ import {
   Flex,
   Icon,
   Stack,
+  useColorMode,
   useColorModeValue,
   useDisclosure
 } from "@chakra-ui/react";
@@ -15,11 +16,13 @@ import React from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import GitHubButton from "react-github-btn";
 import Content from "./Content";
-import sidenav from "../../assets/sidenav.png";
+import sidenavDark from "../../assets/sidenavDark.png";
+import sidenavLight from "../../assets/sidenavLight.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Sidenav(props) {
+  const { colorMode } = useColorMode();
   const { routes } = props;
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
@@ -54,7 +57,15 @@ export default function Sidenav(props) {
           borderRadius="30px"
         >
           <Flex align="center" direction="column" fontSize="20px">
-            <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
+            {colorMode === "light" ? (
+              <>
+                <LazyLoadImage src={sidenavLight} effect="blur"></LazyLoadImage>
+              </>
+            ) : (
+              <>
+                <LazyLoadImage src={sidenavDark} effect="blur"></LazyLoadImage>
+              </>
+            )}
           </Flex>
 
           <Stack direction="column" mb="30px" mt="20px">
@@ -97,6 +108,7 @@ export default function Sidenav(props) {
 }
 
 export function SideNavResponsive(props) {
+  const { colorMode } = useColorMode();
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
   let navbarBorderColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let variantChange = "0.2s linear";
@@ -158,7 +170,21 @@ export function SideNavResponsive(props) {
                 borderRadius="30px"
               >
                 <Flex align="center" direction="column" fontSize="20px">
-                  <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
+                  {colorMode === "light" ? (
+                    <>
+                      <LazyLoadImage
+                        src={sidenavLight}
+                        effect="blur"
+                      ></LazyLoadImage>
+                    </>
+                  ) : (
+                    <>
+                      <LazyLoadImage
+                        src={sidenavDark}
+                        effect="blur"
+                      ></LazyLoadImage>
+                    </>
+                  )}
                 </Flex>
 
                 <Stack direction="column" mb="30px" mt="20px">

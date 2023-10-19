@@ -2,7 +2,7 @@ import React from "react";
 import { Box, useStyleConfig, Flex, Image } from "@chakra-ui/react";
 
 export default function TechStackCard(props) {
-  const { imagepath } = { ...props };
+  const { imagepath, background } = { ...props };
   const styles = useStyleConfig("Card");
 
   return (
@@ -21,7 +21,7 @@ export default function TechStackCard(props) {
         align={{ base: "center", xl: "start" }}
         justify={{ base: "center", xl: "center" }}
       >
-        <Image boxSize="120px" src={imagepath}></Image>
+        <Image boxSize="120px" src={imagepath} backgroundColor={background}></Image>
       </Flex>
     </Box>
   );

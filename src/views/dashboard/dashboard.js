@@ -62,7 +62,7 @@ export default function Dashboard() {
             gap={{ xl: "20px" }}
           >
             <Box
-              pt={{ xl: "100px" }}
+              pt={{ xl: "80px" }}
               pl="10px"
               textAlign="center"
               fontSize={{ sm: "1.5em", md: "2em", xl: "3em" }}
