@@ -21,7 +21,7 @@ export default function Dashboard() {
   const [quote, setQuote] = useState("");
   const styles = useStyleConfig("Card");
 
-  let highlightTextColor = useColorModeValue("lightblue.100", "lightgreen.100");
+  let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let textColor = useColorModeValue("gray.700", "white");
 
   const getActiveRoute = (routes) => {
@@ -73,7 +73,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   color={textColor}
                 >
-                  Hello Everyone!!🙋🏻‍♂️
+                  Hello Everyone!! 🙋🏻‍♂️
                 </Text>
 
                 <Text

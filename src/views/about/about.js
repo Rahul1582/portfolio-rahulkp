@@ -39,7 +39,7 @@ import GitHubCalendar from "react-github-calendar";
 export default function About() {
   const styles = useStyleConfig("Card");
   const { colorMode } = useColorMode();
-  const textColorPrimary = useColorModeValue("lightblue.100", "lightgreen.100");
+  const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"

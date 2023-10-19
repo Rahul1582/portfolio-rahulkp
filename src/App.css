@@ -25,7 +25,7 @@ option {
   background: #e9a6a6;
   width: 3px;
   height: 3px;
-  animation: blink 3s linear infinite, move 20s linear infinite;
+  animation: blink 1s linear infinite, move 20s linear infinite;
   z-index: 9999;
   border-radius: 50%;
 }
@@ -35,7 +35,7 @@ option {
   background: #0284c7;
   width: 3px;
   height: 3px;
-  animation: blink 3s linear infinite, move 20s linear infinite;
+  animation: blink 1s linear infinite, move 20s linear infinite;
   z-index: 9999;
   border-radius: 50%;
 }

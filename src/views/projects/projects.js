@@ -20,7 +20,7 @@ import steg from "../../assets/projects/steg_500x300.jpeg";
 export default function Projects() {
   const textColorPrimary = useColorModeValue(
     "secondaryGray.900",
-    "lightgreen.100"
+    "lightpeach.100"
   );
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {

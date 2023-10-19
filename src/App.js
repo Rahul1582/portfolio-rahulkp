@@ -2,7 +2,7 @@ import "./App.css";
 import Sidenav from "./components/Sidenav/Sidenav";
 import Footer from "./components/Footer/Footer";
 import routes from "./routes.js";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  const { colorMode } = useColorMode();
+
   const redirectRoute = (routes) => {
     return routes.map((route, key) => {
       return (
@@ -19,8 +21,27 @@ export default function App() {
     });
   };
 
+  const StarryBackground = () => {
+    const numberOfStars = 100;
+    const stars = [];
+
+    for (let i = 0; i < numberOfStars; i++) {
+      const style = {
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 5}s`
+      };
+
+      const starClassName = colorMode === "light" ? "star-black" : "star-white";
+
+      stars.push(<div key={i} className={starClassName} style={style}></div>);
+    }
+
+    return <div className="starry-background">{stars}</div>;
+  };
   return (
     <Router>
+      <StarryBackground />
       <Sidenav routes={routes} />
       <Box
         float="right"

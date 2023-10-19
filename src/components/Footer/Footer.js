@@ -13,7 +13,7 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
-  const textColor = useColorModeValue("lightblue.100", "lightgreen.100");
+  const textColor = useColorModeValue("lightblue.100", "lightpeach.100");
 
   return (
     <Flex

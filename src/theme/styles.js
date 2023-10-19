@@ -34,7 +34,7 @@ export const globalStyles = {
       300: "#272445",
       400: "#1F1D36"
     },
-    lightgreen: {
+    lightpeach: {
       100: "#E9A6A6"
     },
     lightblue: {

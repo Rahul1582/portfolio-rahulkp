@@ -28,7 +28,7 @@ export default function Sidenav(props) {
   );
   // Chakra Color Mode
   // let sidenavBg = useColorModeValue("secondaryGray.400", "navyBlue.300");
-  // let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
+  // let navbarBorderColor = useColorModeValue("lightblue.100", "lightpeach.100");
 
   return (
     <Box
@@ -62,7 +62,14 @@ export default function Sidenav(props) {
               <Content routes={routes} />
             </Box>
           </Stack>
-          <Flex align="center" direction="column" fontSize="20px">
+          <Flex
+            align="center"
+            direction="row"
+            fontSize="20px"
+            gap="20px"
+            justifyContent="center"
+            alignItems="center"
+          >
             <GitHubButton
               href="https://github.com/Rahul1582/portfolio-rahulkp"
               data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
@@ -71,6 +78,16 @@ export default function Sidenav(props) {
               aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
             >
               Star
+            </GitHubButton>
+
+            <GitHubButton
+              href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
+              data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
+              data-icon="octicon-repo-forked"
+              data-size="large"
+              aria-label="Fork Rahul1582/portfolio-rahulkp on GitHub"
+            >
+              Fork
             </GitHubButton>
           </Flex>
         </Flex>
@@ -81,7 +98,7 @@ export default function Sidenav(props) {
 
 export function SideNavResponsive(props) {
   let sidenavBg = useColorModeValue("white", "navyBlue.300");
-  let navbarBorderColor = useColorModeValue("lightblue.100", "lightgreen.100");
+  let navbarBorderColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let variantChange = "0.2s linear";
   let shadow = useColorModeValue(
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
@@ -152,7 +169,14 @@ export function SideNavResponsive(props) {
                     <Content routes={routes} />
                   </Box>
                 </Stack>
-                <Flex align="center" direction="column" fontSize="20px">
+                <Flex
+                  align="center"
+                  direction="row"
+                  fontSize="20px"
+                  gap="20px"
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <GitHubButton
                     href="https://github.com/Rahul1582/portfolio-rahulkp"
                     data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
@@ -161,6 +185,16 @@ export function SideNavResponsive(props) {
                     aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
                   >
                     Star
+                  </GitHubButton>
+
+                  <GitHubButton
+                    href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
+                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
+                    data-icon="octicon-repo-forked"
+                    data-size="large"
+                    aria-label="Fork Rahul1582/portfolio-rahulkp on GitHub"
+                  >
+                    Fork
                   </GitHubButton>
                 </Flex>
               </Flex>
