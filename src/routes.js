@@ -26,7 +26,7 @@ const routes = [
   {
     name: "About Me",
     path: "/about",
-    navbarDisplayName: "<About/>",
+    navbarDisplayName: "<About Me/>",
     icon: <Icon as={MdPersonPin} width="30px" height="30px" color="inherit" />,
     component: About
   },

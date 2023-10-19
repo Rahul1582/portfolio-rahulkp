@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { IoMenuOutline } from "react-icons/io5";
+import GitHubButton from "react-github-btn";
 import Content from "./Content";
 import sidenav from "../../assets/sidenav.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -56,11 +57,22 @@ export default function Sidenav(props) {
             <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
           </Flex>
 
-          <Stack direction="column" mb="50px" mt="20px">
+          <Stack direction="column" mb="30px" mt="20px">
             <Box ps="15px" pe={{ md: "16px", "2xl": "1px" }}>
               <Content routes={routes} />
             </Box>
           </Stack>
+          <Flex align="center" direction="column" fontSize="20px">
+            <GitHubButton
+              href="https://github.com/Rahul1582/portfolio-rahulkp"
+              data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
+              data-icon="octicon-star"
+              data-size="large"
+              aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
+            >
+              Star
+            </GitHubButton>
+          </Flex>
         </Flex>
       </Box>
     </Box>
@@ -98,7 +110,7 @@ export function SideNavResponsive(props) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement={document.documentElement.dir === "rtl" ? "right" : "left"}
+        placement="top"
         finalFocusRef={btnRef}
         zIndex="9999"
       >
@@ -110,7 +122,7 @@ export function SideNavResponsive(props) {
             _focus={{ boxShadow: "none" }}
             _hover={{ boxShadow: "none" }}
           />
-          <DrawerBody maxW="300px" px="0rem" pb="0">
+          <DrawerBody maxW="300px" px="0rem" pb="0" overflow="hidden">
             <Box
               bg={sidenavBg}
               transition={variantChange}
@@ -132,7 +144,7 @@ export function SideNavResponsive(props) {
                   <LazyLoadImage src={sidenav} effect="blur"></LazyLoadImage>
                 </Flex>
 
-                <Stack direction="column" mb="50px" mt="20px">
+                <Stack direction="column" mb="30px" mt="20px">
                   <Box
                     ps={{ sm: "0px", "2xl": "15px" }}
                     pe={{ md: "16px", "2xl": "1px" }}
@@ -140,6 +152,17 @@ export function SideNavResponsive(props) {
                     <Content routes={routes} />
                   </Box>
                 </Stack>
+                <Flex align="center" direction="column" fontSize="20px">
+                  <GitHubButton
+                    href="https://github.com/Rahul1582/portfolio-rahulkp"
+                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
+                    data-icon="octicon-star"
+                    data-size="large"
+                    aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
+                  >
+                    Star
+                  </GitHubButton>
+                </Flex>
               </Flex>
             </Box>
           </DrawerBody>

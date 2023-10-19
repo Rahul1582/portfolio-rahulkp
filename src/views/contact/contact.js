@@ -43,6 +43,7 @@ export default function Contact() {
         <SimpleGrid
           columns={{ base: 1, xl: 3, "2xl": 3 }}
           gap="20px"
+          mt={{ sm: "20px", xl: "0" }}
           mb="20px"
           align={{ base: "center", xl: "center" }}
           justify={{ base: "center", xl: "center" }}

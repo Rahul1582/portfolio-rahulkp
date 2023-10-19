@@ -87,14 +87,15 @@ export default function About() {
               overflow="hidden"
             >
               <Box
+                __css={styles}
                 position="absolute"
                 top="0"
                 left="0"
                 width="100%"
                 height="100%"
                 bg={textColorPrimary}
-                transform="rotate(10deg)"
-                zIndex="-1"
+                transform="rotate(4deg)"
+                // zIndex="-1"
               />
               <LazyLoadImage
                 src={myphoto}
@@ -203,7 +204,6 @@ export default function About() {
             username="rahul1582"
             colorScheme={colorMode === "light" ? "light" : "dark"}
             year="last"
-            showWeekdayLabels="true"
           />
         </Box>
         <Flex justifyContent="center" alignItems="center" mt="20px">

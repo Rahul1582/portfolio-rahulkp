@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 
 export default function App() {
-
   const redirectRoute = (routes) => {
     return routes.map((route, key) => {
       return (
@@ -19,7 +18,6 @@ export default function App() {
       );
     });
   };
-
 
   return (
     <Router>
@@ -41,8 +39,9 @@ export default function App() {
           mx="auto"
           p={{ base: "20px", md: "30px" }}
           pe="20px"
-          minH={{ base: "85vh", xl: "90vh" }}
+          minH={{ base: "85vh", xl: "89vh" }}
           pt="50px"
+          overflow="hidden"
         >
           <Routes>
             {redirectRoute(routes)}
