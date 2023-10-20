@@ -96,7 +96,7 @@ export default function ProjectCard(props) {
           direction={{
             base: "column",
             md: "column",
-            lg: "row",
+            lg: "column",
             xl: "row",
             "2xl": "row"
           }}

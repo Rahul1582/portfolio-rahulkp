@@ -1,19 +1,14 @@
 # Portfolio
 
+Self Coded Portfolio Website made using React JS and Chakra UI.
+
+
 <p align="center"> 
   <kbd>
-    <a href="https://rahulkp15.onrender.com/" target="_blank"><img src="./images/laptopView.jpg">
+    <a href="https://rahulkp15.onrender.com/" target="_blank"><img src="./images/intro.jpg" >
   </a>
   </kbd>
 </p>
-
-<div display="flex"> 
-  <kbd>
- <img src="./images/mobile-view-1.jpg" width="540" height="500">
- <img src="./images/mobile-view-2.jpg" width="535" height="500">
-  </kbd>
-</div>
-
 
 ## Live Demo 
 
@@ -25,7 +20,7 @@
 🎨 Customizable Layouts: Personalize your portfolio layout.\
 📱 Responsive Design: Look great on desktop, tablet, and mobile.\
 💡 Edit with Ease: Light weight editing solution.\
-💻 Downloadable React Code: Full control over your portfolio. Access and download the React code.
+💻 Downloadable React Code: Full control over your portfolio.
 
 
 ## Sections 📚
@@ -40,6 +35,26 @@
 
 - [React.js](https://react.dev/)
 - [Chakra UI](https://chakra-ui.com/)
+
+## Screenshots
+
+### Laptop Views
+
+<p align="center"> 
+  <kbd>
+    <a href="https://rahulkp15.onrender.com/" target="_blank"><img src="./images/laptopView.jpg">
+  </a>
+  </kbd>
+</p>
+
+### Mobile Views
+
+<div align="center"> 
+  <kbd>
+ <img src="./images/mobile-view-1.jpg" width="400" height="400">
+ <img src="./images/mobile-view-2.jpg" width="400" height="400">
+  </kbd>
+</div>
 
 ## Getting Started ⚡ :-
 

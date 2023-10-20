@@ -62,47 +62,58 @@ export default function Dashboard() {
             gap={{ xl: "20px" }}
           >
             <Box
-              pt={{ xl: "80px" }}
+              pt={{ xl: "100px" }}
               pl="10px"
               textAlign="center"
-              fontSize={{ sm: "1.5em", md: "2em", xl: "3em" }}
+              fontSize={{ sm: "1.5em", md: "3em", xl: "2.5em" }}
             >
-              <Box __css={styles} border="none">
-                <Text
-                  fontFamily="Lobster Two"
-                  fontWeight="bold"
-                  color={textColor}
-                >
-                  Hello Everyone!! 🙋🏻‍♂️
-                </Text>
-
-                <Text
-                  fontFamily="Lobster Two"
-                  fontWeight="bold"
-                  color={textColor}
-                  mt="20px"
-                >
-                  This is{" "}
-                  <Text display="inline-flex" color={highlightTextColor}>
-                    Rahul Kumar Patro
+              <Flex
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box __css={styles} border="none">
+                  <Text
+                    fontFamily="Lobster Two"
+                    fontWeight="bold"
+                    color={textColor}
+                  >
+                    Hello Everyone!! 🙋🏻‍♂️
                   </Text>
-                </Text>
 
-                <Text
-                  fontFamily="Lobster Two"
-                  fontWeight="bold"
-                  color={textColor}
-                  mt="20px"
-                >
-                  I am a{" "}
-                  <Text display="inline-flex" color={highlightTextColor}>
-                    Software Developer
+                  <Text
+                    fontFamily="Lobster Two"
+                    fontWeight="bold"
+                    color={textColor}
+                    mt="20px"
+                  >
+                    This is{" "}
+                    <Text display="inline-flex" color={highlightTextColor}>
+                      Rahul Kumar Patro
+                    </Text>
                   </Text>
-                </Text>
-              </Box>
+
+                  <Text
+                    fontFamily="Lobster Two"
+                    fontWeight="bold"
+                    color={textColor}
+                    mt="20px"
+                  >
+                    I am a{" "}
+                    <Text display="inline-flex" color={highlightTextColor}>
+                      Software Developer
+                    </Text>
+                  </Text>
+                </Box>
+              </Flex>
             </Box>
-
-            <LazyLoadImage src={dashboardimg} alt="dashboard" effect="blur" />
+            <Flex
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <LazyLoadImage src={dashboardimg} alt="dashboard" effect="blur" />
+            </Flex>
           </Grid>
         </Flex>
 
@@ -116,7 +127,7 @@ export default function Dashboard() {
           >
             Random Quote
             <Box
-              fontSize={{ sm: "1em", md: "1.5em", xl: "1.5em" }}
+              fontSize={{ sm: "1em", md: "1.3em", xl: "1.3em" }}
               color={highlightTextColor}
               cursor="default"
             >
