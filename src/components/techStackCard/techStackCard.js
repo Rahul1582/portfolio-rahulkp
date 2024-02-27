@@ -1,9 +1,10 @@
-import React from "react";
-import { Box, useStyleConfig, Flex, Image } from "@chakra-ui/react";
+import { React, useState } from "react";
+import { Box, useStyleConfig, Flex, Image, Skeleton } from "@chakra-ui/react";
 
 export default function TechStackCard(props) {
   const { imagepath, background } = { ...props };
   const styles = useStyleConfig("Card");
+  const [loadedTechimg, setloadedTechimg] = useState(false);
 
   return (
     <Box
@@ -21,7 +22,19 @@ export default function TechStackCard(props) {
         align={{ base: "center", xl: "start" }}
         justify={{ base: "center", xl: "center" }}
       >
-        <Image boxSize="120px" src={imagepath} backgroundColor={background}></Image>
+        <Skeleton
+          height="100%"
+          isLoaded={loadedTechimg}
+          color="white"
+          fadeDuration={1}
+        >
+          <Image
+            boxSize="120px"
+            src={imagepath}
+            backgroundColor={background}
+            onLoad={() => setloadedTechimg(true)}
+          ></Image>
+        </Skeleton>
       </Flex>
     </Box>
   );

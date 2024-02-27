@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Box,
   Flex,
@@ -7,7 +7,8 @@ import {
   SimpleGrid,
   Text,
   useColorModeValue,
-  useStyleConfig
+  useStyleConfig,
+  Skeleton
 } from "@chakra-ui/react";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
@@ -18,6 +19,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Contact() {
+  const [loadedimage1, setloadedimage1] = useState(false);
+  const [loadedimage2, setloadedimage2] = useState(false);
   const styles = useStyleConfig("Card");
   const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
   const getActiveRoute = (routes) => {
@@ -33,10 +36,20 @@ export default function Contact() {
       <Box pt="30px">
         <Flex justifyContent="center" alignItems="center">
           <Box>
-            <Image src={contactimg}></Image>
+            <Skeleton isLoaded={loadedimage1} color="white" fadeDuration={1}>
+              <Image
+                src={contactimg}
+                onLoad={() => setloadedimage1(true)}
+              ></Image>
+            </Skeleton>
           </Box>
           <Box>
-            <Image src={contactimg1}></Image>
+            <Skeleton isLoaded={loadedimage2} color="white" fadeDuration={1}>
+              <Image
+                src={contactimg1}
+                onLoad={() => setloadedimage2(true)}
+              ></Image>
+            </Skeleton>
           </Box>
         </Flex>
 

@@ -10,9 +10,10 @@ import {
   Stack,
   useColorMode,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
+  Skeleton
 } from "@chakra-ui/react";
-import React from "react";
+import { React, useState, useRef } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import GitHubButton from "react-github-btn";
 import Content from "./Content";
@@ -22,6 +23,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Sidenav(props) {
+  const [loadedSidenavimg, setloadedSidenavimg] = useState(false);
   const { colorMode } = useColorMode();
   const { routes } = props;
   let variantChange = "0.2s linear";
@@ -57,15 +59,17 @@ export default function Sidenav(props) {
           borderRadius="30px"
         >
           <Flex align="center" direction="column" fontSize="20px">
-            {colorMode === "light" ? (
-              <>
-                <LazyLoadImage src={sidenavLight} effect="blur"></LazyLoadImage>
-              </>
-            ) : (
-              <>
-                <LazyLoadImage src={sidenavDark} effect="blur"></LazyLoadImage>
-              </>
-            )}
+            <Skeleton
+              isLoaded={loadedSidenavimg}
+              color="white"
+              fadeDuration={1}
+            >
+              <LazyLoadImage
+                src={colorMode === "light" ? sidenavLight : sidenavDark}
+                effect="blur"
+                onLoad={() => setloadedSidenavimg(true)}
+              ></LazyLoadImage>
+            </Skeleton>
           </Flex>
 
           <Stack direction="column" mb="30px" mt="20px">
@@ -116,10 +120,11 @@ export function SideNavResponsive(props) {
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)"
   );
+  const [loadedSidenavimg, setloadedSidenavimg] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const btnRef = React.useRef();
+  const btnRef = useRef();
 
   const { routes } = props;
 
@@ -170,21 +175,17 @@ export function SideNavResponsive(props) {
                 borderRadius="30px"
               >
                 <Flex align="center" direction="column" fontSize="20px">
-                  {colorMode === "light" ? (
-                    <>
-                      <LazyLoadImage
-                        src={sidenavLight}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </>
-                  ) : (
-                    <>
-                      <LazyLoadImage
-                        src={sidenavDark}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </>
-                  )}
+                  <Skeleton
+                    isLoaded={loadedSidenavimg}
+                    color="white"
+                    fadeDuration={1}
+                  >
+                    <LazyLoadImage
+                      src={colorMode === "light" ? sidenavLight : sidenavDark}
+                      effect="blur"
+                      onLoad={() => setloadedSidenavimg(true)}
+                    ></LazyLoadImage>
+                  </Skeleton>
                 </Flex>
 
                 <Stack direction="column" mb="30px" mt="20px">

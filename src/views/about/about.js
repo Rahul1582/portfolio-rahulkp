@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Box,
   Flex,
@@ -10,7 +10,8 @@ import {
   useColorMode,
   Icon,
   Button,
-  Link
+  Link,
+  Skeleton
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -37,6 +38,7 @@ import myphoto from "../../assets/aboutMePhoto.jpg";
 import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
+  const [loadedProfileimg, setloadedProfileimg] = useState(false);
   const styles = useStyleConfig("Card");
   const { colorMode } = useColorMode();
   const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
@@ -97,14 +99,22 @@ export default function About() {
                 transform="rotate(4deg)"
                 // zIndex="-1"
               />
-              <LazyLoadImage
-                src={myphoto}
-                width="100%"
+              <Skeleton
                 height="100%"
-                alt="Image Alt"
-                effect="blur"
-                style={{ height: "100%" }}
-              />
+                isLoaded={loadedProfileimg}
+                color="white"
+                fadeDuration={1}
+              >
+                <LazyLoadImage
+                  src={myphoto}
+                  width="100%"
+                  height="100%"
+                  alt="Image Alt"
+                  effect="blur"
+                  style={{ height: "100%" }}
+                  onLoad={() => setloadedProfileimg(true)}
+                />
+              </Skeleton>
             </Box>
             <Flex
               direction="column"

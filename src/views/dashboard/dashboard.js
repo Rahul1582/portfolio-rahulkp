@@ -5,7 +5,8 @@ import {
   Text,
   Grid,
   useColorModeValue,
-  useStyleConfig
+  useStyleConfig,
+  Skeleton
 } from "@chakra-ui/react";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar/Navbar";
@@ -19,6 +20,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Dashboard() {
   const [quote, setQuote] = useState("");
+  const [loadedDashboardimg, setloadedDashboardimg] = useState(false);
   const styles = useStyleConfig("Card");
 
   let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
@@ -92,7 +94,6 @@ export default function Dashboard() {
                       Rahul Kumar Patro
                     </Text>
                   </Text>
-
                   <Text
                     fontFamily="Lobster Two"
                     fontWeight="bold"
@@ -112,7 +113,19 @@ export default function Dashboard() {
               justifyContent="center"
               alignItems="center"
             >
-              <LazyLoadImage src={dashboardimg} alt="dashboard" effect="blur" />
+              <Skeleton
+                height={loadedDashboardimg ? "100%" : "50%"}
+                isLoaded={loadedDashboardimg}
+                color="white"
+                fadeDuration={1}
+              >
+                <LazyLoadImage
+                  src={dashboardimg}
+                  alt="dashboard"
+                  effect="blur"
+                  onLoad={() => setloadedDashboardimg(true)}
+                />
+              </Skeleton>
             </Flex>
           </Grid>
         </Flex>
