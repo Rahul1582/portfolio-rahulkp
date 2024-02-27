@@ -39,6 +39,7 @@ import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   const [loadedProfileimg, setloadedProfileimg] = useState(false);
+  const [loadedgithubimg, setloadedgithubimg] = useState(false);
   const styles = useStyleConfig("Card");
   const { colorMode } = useColorMode();
   const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
@@ -217,19 +218,23 @@ export default function About() {
           />
         </Box>
         <Flex justifyContent="center" alignItems="center" mt="20px">
-          {colorMode === "light" ? (
+          <Skeleton
+            height="100%"
+            isLoaded={loadedgithubimg}
+            color="white"
+            fadeDuration={1}
+          >
             <LazyLoadImage
-              src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-light&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
+              src={
+                colorMode === "light"
+                  ? "https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=whatsapp-light&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
+                  : "https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=calm-pink&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
+              }
               alt="GitHub Streak"
               effect="blur"
+              onLoad={() => setloadedgithubimg(true)}
             />
-          ) : (
-            <LazyLoadImage
-              src="https://github-readme-streak-stats.herokuapp.com?user=Rahul1582&theme=calm-pink&hide_border=true&border_radius=5.8&date_format=j%20M%5B%20Y%5D"
-              alt="GitHub Streak"
-              effect="blur"
-            />
-          )}
+          </Skeleton>
         </Flex>
         <Flex justifyContent="center" alignItems="center" mt="20px">
           <Link href="https://github.com/Rahul1582" target="blank">

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Box,
   Flex,
@@ -6,7 +6,8 @@ import {
   Link,
   useColorModeValue,
   useStyleConfig,
-  Text
+  Text,
+  Skeleton
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -20,6 +21,7 @@ export default function ProjectCard(props) {
     projectLiveLink,
     projectLink
   } = props;
+  const [loadedprojectimg, setloadedprojectimg] = useState(false);
   const textColor = useColorModeValue("navy.700", "lightpeach.100");
   const styles = useStyleConfig("Card");
   return (
@@ -33,16 +35,24 @@ export default function ProjectCard(props) {
       }}
     >
       <Box mb={{ base: "10px", "2xl": "10px" }}>
-        <LazyLoadImage
-          src={projectImage}
-          w={{ base: "100%", "3xl": "100%" }}
-          h={{ base: "100%", "3xl": "250px" }}
-          borderRadius="10px"
-          p="20px"
-          effect="blur"
-          // border="2px solid"
-          // borderColor={textColor}
-        />
+        <Skeleton
+          height="100%"
+          isLoaded={loadedprojectimg}
+          color="white"
+          fadeDuration={1}
+        >
+          <LazyLoadImage
+            src={projectImage}
+            w={{ base: "100%", "3xl": "100%" }}
+            h={{ base: "100%", "3xl": "250px" }}
+            borderRadius="10px"
+            p="20px"
+            effect="blur"
+            onLoad={() => setloadedprojectimg(true)}
+            // border="2px solid"
+            // borderColor={textColor}
+          />
+        </Skeleton>
       </Box>
       <Flex flexDirection="column" justify="center" h="100%">
         <Flex direction="row" align="center" justify="Center">
