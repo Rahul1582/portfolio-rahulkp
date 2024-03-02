@@ -19,7 +19,7 @@ Self Coded Portfolio Website made using React JS and Chakra UI.
 ⚡️ Dark and Light Theme \
 🎨 Customizable Layouts: Personalize your portfolio layout.\
 📱  Responsive Design: Look great on desktop, tablet, and mobile.\
-🏳️ Shimmering Effect and Lazy Loading of Images 
+🏳️ Shimmering Effect and Lazy Loading of Images. \
 💡  Edit with Ease: Light weight editing solution.\
 💻 Downloadable React Code: Full control over your portfolio.
 
