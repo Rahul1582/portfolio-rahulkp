@@ -23,10 +23,10 @@ export default function TechStackCard(props) {
         justify={{ base: "center", xl: "center" }}
       >
         <Skeleton
-          height="100%"
           isLoaded={loadedTechimg}
           color="white"
           fadeDuration={1}
+          height={"100%"}
         >
           <Image
             boxSize="120px"

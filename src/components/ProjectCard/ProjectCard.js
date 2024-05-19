@@ -36,10 +36,10 @@ export default function ProjectCard(props) {
     >
       <Box mb={{ base: "10px", "2xl": "10px" }}>
         <Skeleton
-          height="100%"
           isLoaded={loadedprojectimg}
           color="white"
           fadeDuration={1}
+          height={"100%"}
         >
           <LazyLoadImage
             src={projectImage}

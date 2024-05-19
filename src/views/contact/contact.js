@@ -36,7 +36,12 @@ export default function Contact() {
       <Box pt="30px">
         <Flex justifyContent="center" alignItems="center">
           <Box>
-            <Skeleton isLoaded={loadedimage1} color="white" fadeDuration={1}>
+            <Skeleton
+              isLoaded={loadedimage1}
+              color="white"
+              fadeDuration={1}
+              height={"100%"}
+            >
               <Image
                 src={contactimg}
                 onLoad={() => setloadedimage1(true)}
@@ -44,7 +49,13 @@ export default function Contact() {
             </Skeleton>
           </Box>
           <Box>
-            <Skeleton isLoaded={loadedimage2} color="white" fadeDuration={1}>
+            <Skeleton
+              isLoaded={loadedimage2}
+              color="white"
+              fadeDuration={1}
+              width={"100%"}
+              height={"100%"}
+            >
               <Image
                 src={contactimg1}
                 onLoad={() => setloadedimage2(true)}

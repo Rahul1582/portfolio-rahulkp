@@ -63,6 +63,8 @@ export default function Sidenav(props) {
               isLoaded={loadedSidenavimg}
               color="white"
               fadeDuration={1}
+              width={"100%"}
+              height={"100%"}
             >
               <LazyLoadImage
                 src={colorMode === "light" ? sidenavLight : sidenavDark}
@@ -179,6 +181,8 @@ export function SideNavResponsive(props) {
                     isLoaded={loadedSidenavimg}
                     color="white"
                     fadeDuration={1}
+                    width={"100%"}
+                    height={"100%"}
                   >
                     <LazyLoadImage
                       src={colorMode === "light" ? sidenavLight : sidenavDark}
