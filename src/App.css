@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Lilita One';
-  src: url(./assets/fonts/LilitaOne-Regular.ttf);
+  src: url(./assets/fonts/LilitaOne-Regular.woff2);
 }
 
 @font-face {
   font-family: 'Lobster Two';
-  src: url(./assets/fonts/LobsterTwo-Regular.ttf);
+  src: url(./assets/fonts/LobsterTwo-Regular.woff2);
 }
 
 @font-face {
   font-family: 'DM Sans';
-  src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+  src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.woff2);
 }
 
 body {
