@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import {
   Box,
   SimpleGrid,
@@ -22,6 +22,11 @@ export default function Projects() {
     "secondaryGray.900",
     "lightpeach.100"
   );
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {

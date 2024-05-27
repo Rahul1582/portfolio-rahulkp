@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -47,6 +47,10 @@ export default function About() {
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
   );
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {

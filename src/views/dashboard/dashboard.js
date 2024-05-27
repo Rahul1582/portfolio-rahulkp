@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import {
   Flex,
   Box,
@@ -12,8 +12,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import dashboardimg from "../../assets/dashboard.gif";
-import { useState } from "react";
-import { useEffect } from "react";
 import axios from "axios";
 import Typewriter from "typewriter-effect";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -22,17 +20,12 @@ export default function Dashboard() {
   const [quote, setQuote] = useState("");
   const [loadedDashboardimg, setloadedDashboardimg] = useState(false);
   const styles = useStyleConfig("Card");
-
   let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let textColor = useColorModeValue("gray.700", "white");
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   useEffect(() => {
     axios
@@ -46,6 +39,14 @@ export default function Dashboard() {
         console.error("Error fetching quote:", error);
       });
   }, []);
+
+  const getActiveRoute = (routes) => {
+    for (let i = 0; i < routes.length; i++) {
+      if (window.location.href.indexOf(routes[i].path) !== -1) {
+        return routes[i].navbarDisplayName;
+      }
+    }
+  };
 
   return (
     <Box>

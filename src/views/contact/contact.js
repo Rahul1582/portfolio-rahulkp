@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -23,6 +23,11 @@ export default function Contact() {
   const [loadedimage2, setloadedimage2] = useState(false);
   const styles = useStyleConfig("Card");
   const textColorPrimary = useColorModeValue("lightblue.100", "lightpeach.100");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {
