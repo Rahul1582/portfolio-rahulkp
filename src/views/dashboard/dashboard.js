@@ -6,39 +6,92 @@ import {
   Grid,
   useColorModeValue,
   useStyleConfig,
-  Skeleton
+  Skeleton,
 } from "@chakra-ui/react";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import dashboardimg from "../../assets/dashboard.gif";
-import axios from "axios";
 import Typewriter from "typewriter-effect";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Dashboard() {
-  const [quote, setQuote] = useState("");
   const [loadedDashboardimg, setloadedDashboardimg] = useState(false);
   const styles = useStyleConfig("Card");
   let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
   let textColor = useColorModeValue("gray.700", "white");
+  let quotes = [
+    {
+      text: "Genius is one percent inspiration and ninety-nine percent perspiration.",
+      author: "Thomas Edison, type.fit",
+    },
+    {
+      text: "You can observe a lot just by watching.",
+      author: "Yogi Berra, type.fit",
+    },
+    {
+      text: "A house divided against itself cannot stand.",
+      author: "Abraham Lincoln, type.fit",
+    },
+    {
+      text: "Difficulties increase the nearer we get to the goal.",
+      author: "Johann Wolfgang von Goethe, type.fit",
+    },
+    {
+      text: "Fate is in your hands and no one elses",
+      author: "Byron Pulsifer, type.fit",
+    },
+    {
+      text: "Be the chief but never the lord.",
+      author: "Lao Tzu, type.fit",
+    },
+    {
+      text: "Nothing happens unless first we dream.",
+      author: "Carl Sandburg, type.fit",
+    },
+    {
+      text: "Well begun is half done.",
+      author: "Aristotle, type.fit",
+    },
+    {
+      text: "Life is a learning experience, only if you learn.",
+      author: "Yogi Berra",
+    },
+    {
+      text: "Self-complacency is fatal to progress.",
+      author: "Margaret Sangster, type.fit",
+    },
+    {
+      text: "Peace comes from within. Do not seek it without.",
+      author: "Buddha, type.fit",
+    },
+    {
+      text: "What you give is what you get.",
+      author: "Byron Pulsifer, type.fit",
+    },
+    {
+      text: "We can only learn to love by loving.",
+      author: "Iris Murdoch, type.fit",
+    },
+    {
+      text: "Life is change. Growth is optional. Choose wisely.",
+      author: "Karen Clark, type.fit",
+    },
+    {
+      text: "You'll see it when you believe it.",
+      author: "Wayne Dyer, type.fit",
+    },
+    {
+      text: "Today is the tomorrow we worried about yesterday.",
+      author: "type.fit",
+    },
+  ];
+
+  let randomNumber = Math.floor(Math.random() * quotes.length);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-
-  useEffect(() => {
-    axios
-      .get("https://api.quotable.io/random")
-      .then((response) => {
-        let content = response.data.content;
-        setQuote(content);
-      })
-      .catch((error) => {
-        setQuote("");
-        console.error("Error fetching quote:", error);
-      });
-  }, []);
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -56,11 +109,11 @@ export default function Dashboard() {
           <Grid
             templateColumns={{
               base: "1fr",
-              lg: "1fr 1fr"
+              lg: "1fr 1fr",
             }}
             templateRows={{
               base: "repeat(2, 0.5fr)",
-              lg: "1fr"
+              lg: "1fr",
             }}
             gap={{ xl: "20px" }}
           >
@@ -145,10 +198,10 @@ export default function Dashboard() {
               color={highlightTextColor}
               cursor="default"
             >
-              {quote ? (
+              {quotes[randomNumber]?.text ? (
                 <Typewriter
                   onInit={(typewriter) => {
-                    typewriter.typeString(quote).start();
+                    typewriter.typeString(quotes[randomNumber]?.text).start();
                   }}
                 />
               ) : (
