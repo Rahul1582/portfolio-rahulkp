@@ -20,7 +20,7 @@ export default function Resume() {
 
   const handleDownload = () => {
     window.location.href =
-      "https://drive.google.com/uc?export=download&id=15WSX7cweYh95KrsTlv1NsJcqk0K6nGr2";
+      "https://drive.google.com/uc?export=download&id=1vAJPgdS7Ka94EdaV3rcTqOk1Ky01_9jC";
   };
 
   return (
@@ -31,12 +31,12 @@ export default function Resume() {
           <Box
             __css={styles}
             width={{ base: "100%", md: "70%", xl: "70%" }}
-            height={{ base: "60vh", md: "100vh", xl: "150vh" }}
+            height={{ base: "60vh", md: "100vh", xl: "130vh" }}
             overflow="hidden"
             borderRadius="md"
           >
             <iframe
-              src="https://drive.google.com/file/d/15WSX7cweYh95KrsTlv1NsJcqk0K6nGr2/preview"
+              src="https://drive.google.com/file/d/1vAJPgdS7Ka94EdaV3rcTqOk1Ky01_9jC/preview"
               title="Resume"
               width="100%"
               height="100%"
