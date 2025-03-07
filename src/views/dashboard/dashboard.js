@@ -91,7 +91,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  },[]);
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
