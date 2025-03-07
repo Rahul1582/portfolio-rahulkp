@@ -4,7 +4,7 @@ import {
   SimpleGrid,
   Flex,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
@@ -15,6 +15,7 @@ import collab from "../../assets/projects/lets_collab_img3.jpg";
 import blog from "../../assets/projects/bloggers.jpg";
 import eeg from "../../assets/projects/eeg_500x300.jpg";
 import mtrans from "../../assets/projects/mt_500x300.jpg";
+import primeng from "../../assets/projects/primeng.png";
 import steg from "../../assets/projects/steg_500x300.jpeg";
 
 export default function Projects() {
@@ -25,7 +26,7 @@ export default function Projects() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  },[]);
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -51,6 +52,14 @@ export default function Projects() {
           alignItems="center"
           justifyContent="center"
         >
+          <ProjectCard
+            projectImage={primeng}
+            projectName={"primefaces/primeng"}
+            aboutProject={"Open Source Contribution"}
+            techStack={"ANGULAR, JAVASCRIPT"}
+            projectLiveLink="https://primeng.org/"
+            projectLink="https://github.com/primefaces/primeng"
+          />
           <ProjectCard
             projectImage={nftproject}
             projectName={"NFT Based E-Commerce Website"}
@@ -98,7 +107,7 @@ export default function Projects() {
             }
             projectLink="https://github.com/Rahul1582/Emotion-Recognition-from-Psychological-Signals"
           />
-          <ProjectCard
+          {/* <ProjectCard
             projectImage={mtrans}
             projectName={"Machine Translation"}
             aboutProject={
@@ -106,7 +115,7 @@ export default function Projects() {
             }
             techStack={"LSTM, ENCODER-DECODER, ATTENTION MECHANISM"}
             projectLink="https://github.com/Rahul1582/Bloggers-Arena"
-          />
+          /> */}
         </SimpleGrid>
         <Flex
           direction="row"

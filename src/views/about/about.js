@@ -11,7 +11,7 @@ import {
   Icon,
   Button,
   Link,
-  Skeleton
+  Skeleton,
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -34,6 +34,10 @@ import git from "../../assets/icons/git.svg";
 import gitlab from "../../assets/icons/gitlab.svg";
 import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
+import redux from "../../assets/icons/redux.png";
+import firebase from "../../assets/icons/firebase.png";
+import postgres from "../../assets/icons/postgres.png";
+import rxjs from "../../assets/icons/rxjs.png";
 import myphoto from "../../assets/aboutMePhoto.jpg";
 import GitHubCalendar from "react-github-calendar";
 
@@ -50,7 +54,7 @@ export default function About() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  },[]);
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -78,10 +82,10 @@ export default function About() {
           <Grid
             templateColumns={{
               base: "1fr",
-              lg: "1.34fr 1.62fr"
+              lg: "1.34fr 1.62fr",
             }}
             templateRows={{
-              lg: "1fr"
+              lg: "1fr",
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
@@ -193,12 +197,16 @@ export default function About() {
           <TechStackCard imagepath={react} />
           <TechStackCard imagepath={js} />
           <TechStackCard imagepath={typescript} />
+          <TechStackCard imagepath={redux} background="white" />
+          <TechStackCard imagepath={rxjs} background="white" />
           <TechStackCard imagepath={cpp} />
           <TechStackCard imagepath={node} />
           <TechStackCard imagepath={mongo} />
+          <TechStackCard imagepath={postgres} />
           <TechStackCard imagepath={express} background="white" />
           <TechStackCard imagepath={git} />
           <TechStackCard imagepath={gitlab} />
+          <TechStackCard imagepath={firebase} background="white" />
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
         </SimpleGrid>
