@@ -38,6 +38,8 @@ import redux from "../../assets/icons/redux.png";
 import firebase from "../../assets/icons/firebase.png";
 import postgres from "../../assets/icons/postgres.png";
 import rxjs from "../../assets/icons/rxjs.png";
+import azure from "../../assets/icons/azure.png";
+import bootstrap from "../../assets/icons/bootstrap.png";
 import myphoto from "../../assets/aboutMePhoto.jpg";
 import GitHubCalendar from "react-github-calendar";
 
@@ -54,7 +56,7 @@ export default function About() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  },[]);
+  }, []);
 
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -206,9 +208,11 @@ export default function About() {
           <TechStackCard imagepath={express} background="white" />
           <TechStackCard imagepath={git} />
           <TechStackCard imagepath={gitlab} />
-          <TechStackCard imagepath={firebase} background="white" />
+          <TechStackCard imagepath={firebase} />
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
+          <TechStackCard imagepath={bootstrap} />
+          <TechStackCard imagepath={azure} />
         </SimpleGrid>
 
         <Flex
