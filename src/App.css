@@ -31,6 +31,14 @@ option {
   z-index: -1;
 }
 
+.loader-center{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .star-white {
   position: absolute;
   background: #e9a6a6;

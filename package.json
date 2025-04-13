@@ -21,6 +21,7 @@
     "react-github-calendar": "^4.0.1",
     "react-icons": "^4.11.0",
     "react-lazy-load-image-component": "^1.6.0",
+    "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "typewriter-effect": "^2.21.0",

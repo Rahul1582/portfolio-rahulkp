@@ -67,6 +67,7 @@ export default function Sidenav(props) {
               height={"100%"}
             >
               <LazyLoadImage
+                height= "265px"
                 src={colorMode === "light" ? sidenavLight : sidenavDark}
                 effect="blur"
                 onLoad={() => setloadedSidenavimg(true)}
