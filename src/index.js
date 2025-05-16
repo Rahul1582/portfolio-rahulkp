@@ -7,18 +7,28 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme/theme";
 import { ThemeEditorProvider } from "@hypertheme-editor/chakra-ui";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <ChakraProvider theme={theme}>
-    <React.StrictMode>
-      <ThemeEditorProvider>
-        <App />
-      </ThemeEditorProvider>
-    </React.StrictMode>
-  </ChakraProvider>
-);
+// Use React.StrictMode as the outermost wrapper for best practices.
+// Only call ReactDOM.createRoot and root.render if the element exists.
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const container = document.getElementById("root");
+
+if (container) {
+  const root = ReactDOM.createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <ThemeEditorProvider>
+          <App />
+        </ThemeEditorProvider>
+      </ChakraProvider>
+    </React.StrictMode>
+  );
+} else {
+  // Optional: Handle the case where root element is not found.
+  // This block will help debugging in development.
+  // eslint-disable-next-line no-console
+  console.error("Root element not found. Unable to render React app.");
+}
+
+// Web Vitals reporting (optional for performance monitoring).
 reportWebVitals();
