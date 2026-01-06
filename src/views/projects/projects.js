@@ -14,7 +14,6 @@ import medhub from "../../assets/projects/medhub_500x300.jpg";
 import collab from "../../assets/projects/lets_collab_img3.jpg";
 import blog from "../../assets/projects/bloggers.jpg";
 import eeg from "../../assets/projects/eeg_500x300.jpg";
-import mtrans from "../../assets/projects/mt_500x300.jpg";
 import primeng from "../../assets/projects/primeng.png";
 import steg from "../../assets/projects/steg_500x300.jpeg";
 

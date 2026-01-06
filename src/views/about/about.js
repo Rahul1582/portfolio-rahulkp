@@ -145,7 +145,7 @@ export default function About() {
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Current Organization"
-                    value="Truminds Software Systems"
+                    value="Teradata"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}

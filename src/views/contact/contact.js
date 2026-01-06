@@ -94,7 +94,7 @@ export default function Contact() {
               </Box>
               <Text textAlign="center">FIND ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
-                Truminds Software Systems
+                Teradata
               </Text>
             </Box>
           </Flex>
