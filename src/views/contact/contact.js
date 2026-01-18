@@ -92,9 +92,9 @@ export default function Contact() {
                   color="inherit"
                 />
               </Box>
-              <Text textAlign="center">FIND ME @</Text>
+              <Text textAlign="center">FIND ME IN</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
-                Teradata
+                Bengaluru
               </Text>
             </Box>
           </Flex>
